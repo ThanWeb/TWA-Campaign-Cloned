@@ -22,6 +22,8 @@
   <a href="https://www.paypal.me/AmitMerchant">
     <img src="https://img.shields.io/badge/$-donate-ff69b4.svg?maxAge=2592000&amp;style=flat">
   </a>
+
+  Mari kita tambah changes di sini....
 </p>
 
 <p align="center">
