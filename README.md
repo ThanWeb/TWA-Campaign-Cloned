@@ -1,6 +1,5 @@
 # This is intern space
 
-
 <h1 align="center">
   <br>
   <a href="http://www.amitmerchant.com/electron-markdownify"><img src="https://raw.githubusercontent.com/amitmerchant1990/electron-markdownify/master/app/img/markdownify.png" alt="Markdownify" width="200"></a>
@@ -38,30 +37,27 @@
 
 ## Key Features
 
-* LivePreview - Make changes, See changes
+- LivePreview - Make changes, See changes
   - Instantly see what your Markdown documents look like in HTML as you create them.
-* Sync Scrolling
+- Sync Scrolling
   - While you type, LivePreview will automatically scroll to the current location you're editing.
-* GitHub Flavored Markdown  
-* Syntax highlighting
-* [KaTeX](https://khan.github.io/KaTeX/) Support
-* Dark/Light mode
-* Toolbar for basic Markdown formatting
-* Supports multiple cursors
-* Save the Markdown preview as PDF
-* Emoji support in preview :tada:
-* App will keep alive in tray for quick usage
-* Full screen mode
+- GitHub Flavored Markdown
+- Syntax highlighting
+- [KaTeX](https://khan.github.io/KaTeX/) Support
+- Dark/Light mode
+- Toolbar for basic Markdown formatting
+- Supports multiple cursors
+- Save the Markdown preview as PDF
+- Emoji support in preview :tada:
+- App will keep alive in tray for quick usage
+- Full screen mode
   - Write distraction free.
-* Cross platform
+- Cross platform
   - Windows, macOS and Linux ready.
-
 
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
-
-
 
 <!-- PROJECT LOGO -->
 <br />
@@ -85,28 +81,23 @@
 
 Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
 
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
-* [Malven's Grid Cheatsheet](https://grid.malven.co/)
-* [Img Shields](https://shields.io)
-* [GitHub Pages](https://pages.github.com)
-* [Font Awesome](https://fontawesome.com)
-* [React Icons](https://react-icons.github.io/react-icons/search)
-
+- [Choose an Open Source License](https://choosealicense.com)
+- [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
+- [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
+- [Malven's Grid Cheatsheet](https://grid.malven.co/)
+- [Img Shields](https://shields.io)
+- [GitHub Pages](https://pages.github.com)
+- [Font Awesome](https://fontawesome.com)
+- [React Icons](https://react-icons.github.io/react-icons/search)
 
 [contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
 [contributors-url]: https://github.com/travlrcom/intern-space/graphs/contributors
-
 [forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
 [forks-url]: https://github.com/bagusanom
-
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/bagus-anom-96a9a5244/
 
-
 - Hans Rio Alfredo Palla (https://github.com/ThanWeb)
-
 
 # About The Project
 
@@ -114,25 +105,26 @@ Use this space to list resources you find helpful and would like to give credit 
 There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
 
 Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should implement DRY principles to the rest of your life :laughing:
+
+- Your time should be focused on creating something amazing. A project that solves a problem and helps others
+- You shouldn't be doing the same tasks over and over like creating a README from scratch
+- You should implement DRY principles to the rest of your life :laughing:
 
 Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this template!
 Use the `BLANK_README.md` to get started.
 
 ### Build With
+
 This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 
-* ![](https://img.shields.io/badge/Code-React-informational?style=flat&logo=react&color=61DAFB)
-* ![]()
-*
-*
-*
-*
-*
-*
-<!-- GETTING STARTED -->
+- ![](https://img.shields.io/badge/Code-React-informational?style=flat&logo=react&color=61DAFB)
+- ![]()
+-
+-
+-
+-
+-
+- <!-- GETTING STARTED -->
 
 ## Getting Started
 
@@ -184,5 +176,5 @@ Use this space to show useful examples of how a project can be used. Additional 
 
 Agni was here...
 
-
 Testing kedua...
+Testing keempat...
