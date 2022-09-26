@@ -192,5 +192,7 @@ Testing kelima...
 ANOM HERE;;;
 ANOM HERE2;;;
 3333333
+yooooo kita kemana aja
 Lalalalaslala
 yeyeyeye
+hahahahahaha
