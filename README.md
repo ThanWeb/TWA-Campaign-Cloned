@@ -133,7 +133,12 @@ To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
+<<<<<<< HEAD
 This is an example of how to list things you need to use the software and how to install them 2.
+=======
+This is an example of how to list things you need to use the software and how to install them.
+
+> > > > > > > main
 
 - npm
   ```sh
@@ -177,4 +182,5 @@ Use this space to show useful examples of how a project can be used. Additional 
 Agni was here...
 
 Testing kedua...
+Testing ketiga...
 Testing keempat...
