@@ -196,3 +196,5 @@ yooooo kita kemana aja
 Lalalalaslala
 yeyeyeye
 hahahahahaha
+
+Editing Kumara
