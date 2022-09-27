@@ -23,7 +23,8 @@
     <img src="https://img.shields.io/badge/$-donate-ff69b4.svg?maxAge=2592000&amp;style=flat">
   </a>
 
-  Mari kita tambah changes di sini....
+Mari kita tambah changes di sini....
+
 </p>
 
 <p align="center">
@@ -105,7 +106,6 @@ Use this space to list resources you find helpful and would like to give credit 
 [![Forks][forks-shield]][forks-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
-
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
@@ -127,13 +127,12 @@ Use this space to list resources you find helpful and would like to give credit 
 </div>
 
 Use this space to list resources you find hel…
+
 # This is intern space
 
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
-
-
 
 <!-- PROJECT LOGO -->
 <br />
@@ -157,27 +156,24 @@ Use this space to list resources you find hel…
 
 Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
 
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
-* [Malven's Grid Cheatsheet](https://grid.malven.co/)
-* [Img Shields](https://shields.io)
-* [GitHub Pages](https://pages.github.com)
-* [Font Awesome](https://fontawesome.com)
-* [React Icons](https://react-icons.github.io/react-icons/search)
-
+- [Choose an Open Source License](https://choosealicense.com)
+- [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
+- [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
+- [Malven's Grid Cheatsheet](https://grid.malven.co/)
+- [Img Shields](https://shields.io)
+- [GitHub Pages](https://pages.github.com)
+- [Font Awesome](https://fontawesome.com)
+- [React Icons](https://react-icons.github.io/react-icons/search)
 
 [contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
 [contributors-url]: https://github.com/travlrcom/intern-space/graphs/contributors
-
 [forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
 [forks-url]: https://github.com/bagusanom
-
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/bagus-anom-96a9a5244/
 
-
 - Hans Rio Alfredo Palla (https://github.com/ThanWeb)
+
 ## About The Project
 
 ![This is an image](https://cdn-images-1.medium.com/max/1200/1*pE2fOVDikEUwiQJlh4ggzg.jpeg)
@@ -265,19 +261,19 @@ Testing ketiga...
 Testing keempat...
 Testing kelima...
 
-
 ANOM HERE;;;
 ANOM HERE2;;;
 3333333
 <<<<<<< HEAD
 
-test sourcetree;
-=======
+# test sourcetree;
+
 yooooo kita kemana aja
 Lalalalaslala
 yeyeyeye
 hahahahahaha
->>>>>>> 8f6cd8e9ae45e04ec35ba6cefd4aee168fa3ee87
+
+> > > > > > > 8f6cd8e9ae45e04ec35ba6cefd4aee168fa3ee87
 
 > > > > > > > main
 
@@ -327,7 +323,6 @@ Testing ketiga...
 Testing keempat...
 Testing kelima...
 
-
 ANOM HERE;;;
 ANOM HERE2;;;
 3333333
@@ -337,3 +332,5 @@ yeyeyeye
 hahahahahaha
 
 test sourcetree;
+
+{This is my first commit}
