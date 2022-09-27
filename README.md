@@ -212,12 +212,10 @@ To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-<<<<<<< HEAD
+
 This is an example of how to list things you need to use the software and how to install them 2.
-=======
 This is an example of how to list things you need to use the software and how to install them.
 
-> > > > > > > main
 
 - npm
   ```sh
@@ -267,23 +265,28 @@ Testing kelima...
 
 
 ANOM HERE;;;
+
+
+testing
+
+testinng 2
+
 ANOM HERE2;;;
 3333333
-<<<<<<< HEAD
+
 
 test sourcetree;
-=======
+
 yooooo kita kemana aja
 Lalalalaslala
 yeyeyeye
 hahahahahaha
-<<<<<<< HEAD
+
 
 Editing Kumara
-=======
->>>>>>> 8f6cd8e9ae45e04ec35ba6cefd4aee168fa3ee87
 
-> > > > > > > main
+
+
 
 - npm
   ```sh
@@ -335,17 +338,15 @@ Testing kelima...
 ANOM HERE;;;
 ANOM HERE2;;;
 3333333
-<<<<<<< HEAD
+
 
 test sourcetree;
-=======
+
 yooooo kita kemana aja
 Lalalalaslala
 yeyeyeye
 hahahahahaha
->>>>>>> 8f6cd8e9ae45e04ec35ba6cefd4aee168fa3ee87
 
-> > > > > > > main
 
 - npm
   ```sh
@@ -407,3 +408,4 @@ test sourcetree;
 testing coba coba !!!!!!
 
 testing kedua
+
