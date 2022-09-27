@@ -281,13 +281,23 @@ yeyeyeye
 hahahahahaha
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 # Editing Kumara
 
+<<<<<<< HEAD
+> > > > > > > main
+
+> > > > > > > 8f6cd8e9ae45e04ec35ba6cefd4aee168fa3ee87
+
+> > > > > > > main
+=======
 > > > > > > > # 8f6cd8e9ae45e04ec35ba6cefd4aee168fa3ee87
 > > > > > > >
 > > > > > > > Editing Kumara
 > > > > > > > 66af31ae3d9b3f7d3e1324493d05bf8818f5c855
+>>>>>>> 444b372edf071e36aaaf72f2a21613925efd51a0
 
 - npm
   ```sh
@@ -334,6 +344,8 @@ Testing kedua...
 Testing ketiga...
 Testing keempat...
 Testing kelima...
+
+# <<<<<<< HEAD
 
 ANOM HERE;;;
 ANOM HERE2;;;
@@ -414,6 +426,10 @@ hahahahahaha
 
 test sourcetree;
 
+{This is my first commit}
+{This is my second commit}
+{This is my third commit}
+=======
 testing coba coba !!!!!!
 
 # #Adding commit
