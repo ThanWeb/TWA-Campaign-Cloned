@@ -272,6 +272,77 @@ yooooo kita kemana aja
 Lalalalaslala
 yeyeyeye
 hahahahahaha
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+# Editing Kumara
+
+> > > > > > > main
+
+> > > > > > > 8f6cd8e9ae45e04ec35ba6cefd4aee168fa3ee87
+
+> > > > > > > main
+
+- npm
+  ```sh
+  npm install npm@latest -g
+  ```
+- @vue/cli
+  ```sh
+  npm install @vue/cli
+  ```
+
+### Installation
+
+_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
+
+1. Get a free API Key at [https://example.com](https://example.com)
+2. Clone the repo
+   ```sh
+   git clone https://github.com/your_username_/Project-Name.git
+   ```
+3. Install NPM packages
+   ```sh
+   npm install
+   ```
+4. Enter your API in `config.js`
+   ```js
+   const API_KEY = "ENTER YOUR API";
+   ```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- USAGE EXAMPLES -->
+
+## Usage
+
+Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+
+![This is an image](https://cdn-images-1.medium.com/max/1200/1*pE2fOVDikEUwiQJlh4ggzg.jpeg)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+Agni was here...
+
+Testing kedua...
+Testing ketiga...
+Testing keempat...
+Testing kelima...
+
+# <<<<<<< HEAD
+
+ANOM HERE;;;
+ANOM HERE2;;;
+3333333
+<<<<<<< HEAD
+
+# test sourcetree;
+
+yooooo kita kemana aja
+Lalalalaslala
+yeyeyeye
+hahahahahaha
 
 > > > > > > > 8f6cd8e9ae45e04ec35ba6cefd4aee168fa3ee87
 
@@ -336,3 +407,9 @@ test sourcetree;
 {This is my first commit}
 {This is my second commit}
 {This is my third commit}
+=======
+testing coba coba !!!!!!
+
+# #Adding commit
+
+testing kedua
