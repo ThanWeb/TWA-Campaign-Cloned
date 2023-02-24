@@ -7,7 +7,7 @@
         "generate": "nuxt generate",
         "preview": "nuxt preview",
         "postinstall": "nuxt prepare",
-        "lint": "eslint --ext .js,.vue,.ts ."
+        "lint": "eslint --ext .js,.vue,.ts . && npx stylelint assets/styles/**"
     },
     "devDependencies": {
         "@nuxt/eslint-config": "^0.1.1",
