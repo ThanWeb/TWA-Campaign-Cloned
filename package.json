@@ -1,4 +1,5 @@
 {
+    "name": "intern-space",
     "private": true,
     "scripts": {
         "build": "nuxt build",
