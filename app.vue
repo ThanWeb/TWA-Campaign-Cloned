@@ -1,14 +1,16 @@
 <template>
-    <div class="main">
-        <NuxtLayout>
+    <NuxtLayout>
+        <main>
             <NuxtPage />
-        </NuxtLayout>
-    </div>
+        </main>
+    </NuxtLayout>
 </template>
 
 <style lang="scss">
-    .main {
-        background-color: $color-primary;
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
     }
 
     .page-enter-active,
