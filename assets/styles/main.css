@@ -5,6 +5,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-size: 12px;
     font-family: Inter, Arial, Helvetica, sans-serif;
