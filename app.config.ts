@@ -1,9 +1,9 @@
 export default defineAppConfig({
-    title: 'Watch Out',
+    title: 'Western Australia Holiday Packages: Perth, The Kimberley & More',
     theme: {
-        dark: true,
+        dark: false,
         colors: {
-            primary: '#000000'
+            primary: '#FFF'
         }
     }
 })

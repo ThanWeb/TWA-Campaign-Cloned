@@ -7,9 +7,9 @@ export default defineNuxtConfig({
         head: {
             charset: 'utf-16',
             viewport: 'width=device-width, initial-scale=1',
-            title: 'Watch Out',
+            title: 'Western Australia Holiday Packages: Perth, The Kimberley & More',
             meta: [
-                { name: 'description', content: 'Let\'s find watch-able movies' }
+                { name: 'description', content: 'Book your Western Australia holiday with tours, activities, flights and accommodation in East Kimberley, Perth, Rottnest Island and more epic WA holiday locations.' }
             ],
             htmlAttrs: {
                 lang: 'en'
