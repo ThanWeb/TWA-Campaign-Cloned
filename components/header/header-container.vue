@@ -1,6 +1,6 @@
 <template>
     <header 
-        class="bg-transparent absolute"
+        class="main-header bg-transparent absolute w-full"
         :class="{'h-screen w-screen inset-0 flex flex-col' : isMainNavShowed}"
     >
         <div 
@@ -12,18 +12,18 @@
                 @click="toggleMainNav"
             >
                 <img 
-                    :src="isMainNavShowed ? '/_nuxt/assets/images/icons/close.svg' : '/_nuxt/assets/images/icons/hamburger.svg'"
+                    :src="isMainNavShowed ? '/images/icons/close.svg' : '/images/icons/hamburger.svg'"
                     alt="Main Menu"
                     :class="{'close-nav' : isMainNavShowed}"
                 >
             </button>
             <img 
-                :src="isMainNavShowed ? '/_nuxt/assets/images/logo/10Travlr-Default.svg' : '/_nuxt/assets/images/logo/10Travlr-Inverted.svg'"
+                :src="isMainNavShowed ? '/images/logo/10Travlr-Default.svg' : '/images/logo/10Travlr-Inverted.svg'"
                 alt="10Travlr"
                 class="travlr-logo"
             >
             <img 
-                :src="isMainNavShowed ? '/_nuxt/assets/images/logo/WA-Default.svg' : '/_nuxt/assets/images/logo/WA-Inverted.svg'"
+                :src="isMainNavShowed ? '/images/logo/WA-Default.svg' : '/images/logo/WA-Inverted.svg'"
                 alt="Western Australia"
                 class="western-australia-logo pl-4"
                 :class="{'active' : isMainNavShowed}"
@@ -85,7 +85,7 @@
                     rel="external noopener"
                 >
                     <img 
-                        src="/_nuxt/assets/images/icons/icon-fb.svg"
+                        src="/images/icons/icon-fb.svg"
                         alt="Facebook"
                         class="invert-dark"
                     >
@@ -95,7 +95,7 @@
                     target="_blank"
                 >
                     <img 
-                        src="/_nuxt/assets/images/icons/icon-tw.svg"
+                        src="/images/icons/icon-tw.svg"
                         alt="Facebook"
                         class="invert-dark"
                     >

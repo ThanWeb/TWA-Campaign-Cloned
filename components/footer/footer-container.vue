@@ -29,7 +29,7 @@
             </ul>
         </nav>
         <img 
-            src="/_nuxt/assets/images/logo/AFTA-ATAS.svg"
+            src="/images/logo/AFTA-ATAS.svg"
             alt="AFTA ATAS"
             class="mb-4 h-16"
         >
@@ -43,7 +43,7 @@
                 Back to top 
             </span>
             <img 
-                src="/_nuxt/assets/images/icons/icon-up.svg"
+                src="/images/icons/icon-up.svg"
                 alt="Back to top"
                 class="w-5 ml-2"
             >
