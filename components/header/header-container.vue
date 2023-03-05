@@ -1,10 +1,10 @@
 <template>
     <header 
-        class="main-header bg-transparent absolute w-full"
+        class="bg-transparent absolute w-full"
         :class="{'h-screen w-screen inset-0 flex flex-col' : isMainNavShowed}"
     >
         <div 
-            class="flex px-4 py-6 gap-x-4 items-center"
+            class="main-header w-screen flex px-4 py-6 gap-x-4 items-center"
             :class="{'bg-white z-10' : isMainNavShowed}"
         >
             <button 
@@ -14,26 +14,26 @@
                 <img 
                     :src="isMainNavShowed ? '/images/icons/close.svg' : '/images/icons/hamburger.svg'"
                     alt="Main Menu"
-                    :class="{'close-nav' : isMainNavShowed}"
+                    :class="isMainNavShowed ? 'close-nav' : 'open-nav'"
                 >
             </button>
             <img 
                 :src="isMainNavShowed ? '/images/logo/10Travlr-Default.svg' : '/images/logo/10Travlr-Inverted.svg'"
                 alt="10Travlr"
-                class="travlr-logo"
+                class="travlr-logo logo"
             >
             <img 
                 :src="isMainNavShowed ? '/images/logo/WA-Default.svg' : '/images/logo/WA-Inverted.svg'"
                 alt="Western Australia"
-                class="western-australia-logo pl-4"
+                class="western-australia-logo logo pl-4"
                 :class="{'active' : isMainNavShowed}"
             >
-            <button 
-                type="button" 
-                class="hidden lg:block"
+            <a 
+                href="#book-now-section"
+                class="book-now-header hidden lg:block rounded-3xl book-now-button mx-6 uppercase py-3 font-semibold tracking-widest text-center"
             >
                 Book Now
-            </button>
+            </a>
         </div>
         <nav
             class="main-nav flex-col text-center justify-evenly pt-32"
@@ -131,6 +131,10 @@ export default {
         filter: invert(80%);
     }
 
+    .main-header {
+        height: 100px;
+    }
+
     .main-nav {
         display: flex;
         position: fixed;
@@ -139,8 +143,10 @@ export default {
         transition: 0.4s;
         transition-timing-function: cubic-bezier(.4,0,.2,1);
         transition-delay: 0s;
+        z-index: -5;
 
         &.active {
+            z-index: 5;
             top: 0;
         }
     }
