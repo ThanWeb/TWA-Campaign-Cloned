@@ -29,7 +29,7 @@
             </ul>
         </nav>
         <img 
-            src="/images/logo/AFTA-ATAS.svg"
+            src="/images/logo/afta-atas.svg"
             alt="AFTA ATAS"
             class="mb-4 h-16"
         >

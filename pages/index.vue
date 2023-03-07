@@ -23,7 +23,7 @@
             >
                 <div>
                     <img 
-                        src="/images/wander-out-yonder.svg"
+                        src="/images/logo/wander-out-yonder.svg"
                         alt="Wander Out Yonder"
                         class="px-16 pt-8 mx-auto mb-0"
                     >
@@ -71,6 +71,23 @@
                 <p class="text-base">
                     You saw Joel Creasey wander out yonder – now it's your turn.
                 </p>
+            </div>
+        </div>
+        <div class="you-may-also-like-section px-6">
+            <header class="uppercase">
+                <h1 class="header-border mb-2">
+                    You May Also Like
+                </h1>
+                <p class="text-sm">
+                    spectacular WA trips Joel didn’t get to take (but you can)
+                </p>
+            </header>
+            <div class="flex flex-col gap-y-4">
+                <CategoryCard 
+                    v-for="(item, index) in categoryItem"
+                    v-bind="item" 
+                    :key="index"
+                />
             </div>
         </div>
         <div class="policies-section px-6 pt-10 pb-12 flex flex-col gap-y-10">
@@ -138,7 +155,7 @@
         <div class="form-section">
             <div class="h-60">
                 <img 
-                    src="/images/quokka.svg" 
+                    src="/images/newsletter/quokka.png" 
                     alt="Cute Quokka"
                     class="h-full w-full object-cover"
                 >
@@ -216,15 +233,33 @@
 </template>
 
 <script lang='ts'>
-interface PropsData {
-    videoBackgroundHeight: string
+interface Data {
+    videoBackgroundHeight: string,
+    categoryItem: Array<object>
 }
 
 export default {
     name: 'LandingPage',
-    data (): PropsData {
+    data (): Data {
         return {
-            videoBackgroundHeight: '0'
+            videoBackgroundHeight: '0',
+            categoryItem: [
+                {
+                    heading: 'Explore Activities',
+                    text: 'Unique things to do for every kind of holiday',
+                    image: '/images/Category-01.png'
+                },
+                {
+                    heading: 'Find Places to Stay',
+                    text: 'Cosy retreats and city breaks for every budget',
+                    image: '/images/Category-02.png'
+                },
+                {
+                    heading: 'Search Flights',
+                    text: 'Flights to suit your calendar',
+                    image: '/images/Category-03.png'
+                }
+            ]
         }
     },
     mounted() {
@@ -246,6 +281,7 @@ export default {
         justify-content: space-between;
         top: 0;
         z-index: 10;
+        border-bottom: 1px solid #D1D5DB;
     }
  
     .scrolled .book-now-header {
