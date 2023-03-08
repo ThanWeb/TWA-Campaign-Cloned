@@ -43,7 +43,7 @@
                 </div>
             </div>
         </div>
-        <div class="overview section mt-6 mb-12 mx-6">
+        <div class="overview-section mt-6 mb-12 mx-6">
             <header>
                 <h1 class="header-border py-6">
                     Otherworldly, wild, magnificent – this is Western Australia
@@ -73,6 +73,15 @@
                 </p>
             </div>
         </div>
+        <div class="creaseys-videos-section">
+            <div>
+                <VideoCard 
+                    v-for="(video, index) in creaseysVideos"
+                    v-bind="video"
+                    :key="index"
+                />
+            </div>
+        </div>
         <div class="you-may-also-like-section px-6">
             <header class="uppercase">
                 <h1 class="header-border mb-2">
@@ -82,6 +91,20 @@
                     spectacular WA trips Joel didn’t get to take (but you can)
                 </p>
             </header>
+            <div>
+                <DealsCarousel 
+                    v-for="(deals, index) in mainDeals"
+                    v-bind="deals"
+                    :key="index"
+                />
+            </div>
+            <div class="my-6">
+                <DealsCard 
+                    v-for="(deals, index) in secondaryDeals"
+                    v-bind="deals"
+                    :key="index"
+                />
+            </div>
             <div class="flex flex-col gap-y-4">
                 <CategoryCard 
                     v-for="(item, index) in categoryItem"
@@ -235,7 +258,42 @@
 <script lang='ts'>
 interface Data {
     videoBackgroundHeight: string,
-    categoryItem: Array<object>
+    creaseysVideos: Array<CreaseysVideos>,
+    mainDeals: Array<MainDeals>,
+    secondaryDeals: Array<SecondaryDeals>,
+    categoryItem: Array<CategoryItem>
+}
+
+interface CreaseysVideos {
+    heading: string,
+    description: string,
+    thumbnail: string,
+    videoURL: string,
+}
+
+interface MainDeals {
+    location: string,
+    heading: string,
+    description: string,
+    images: Array<string>,
+    details: Array<string>,
+    validUntil: string,
+    days: number,
+    price: string
+}
+
+interface SecondaryDeals {
+    location: string,
+    heading: string,
+    description: string,
+    image: string,
+    price: string
+}
+
+interface CategoryItem {
+    heading: string,
+    text: string,
+    image: string
 }
 
 export default {
@@ -243,21 +301,170 @@ export default {
     data (): Data {
         return {
             videoBackgroundHeight: '0',
+            creaseysVideos: [
+                {
+                    heading: 'JOEL CREASEY’S EAST KIMBERLEY ADVENTURE',
+                    description: 'Watch the comedian explore The Bungle Bungle Range, Kununurra/Goonoonoorrang, and more',
+                    thumbnail: 'thumbnail-1.jpeg',
+                    videoURL: 'https://www.youtube.com/embed/uWrf2vt-7P8'
+                },
+                {
+                    heading: 'JOEL CREASEY’S KUNUNURRA ADVENTURE',
+                    description: 'Watch Joel take on El Questro and Lake Argyle',
+                    thumbnail: 'thumbnail-2.jpeg',
+                    videoURL: 'https://www.youtube.com/embed/f0UCRFQJO9s'
+                },
+                {
+                    heading: 'JOEL CREASEY’S LONG WEEKEND ADVENTURE',
+                    description: 'Watch his wander out yonder in Perth',
+                    thumbnail: 'thumbnail-3.png',
+                    videoURL: 'https://www.youtube.com/embed/cHaKdzbjl9Y'
+                },
+                {
+                    heading: 'JOEL CREASEY’S FOODIE ADVENTURE',
+                    description: 'Watch the comedian wander out yonder in Perth and the Swan Valley',
+                    thumbnail: 'thumbnail-4.jpeg',
+                    videoURL: 'https://www.youtube.com/embed/F50pooP7_fA'
+                }
+            ],
+            mainDeals: [
+                {
+                    location: 'Perth',
+                    heading: 'Taste Your Way Around Perth',
+                    description: 'Indulge in a glorious food and wine journey',
+                    images: [
+                        'deal-1-image-01.png', 
+                        'deal-1-image-02.png', 
+                        'deal-1-image-03.png', 
+                        'deal-1-image-04.png', 
+                        'deal-1-image-05.png'
+                    ],
+                    details: [
+                        'Taste of the Swan Valley day tour and cruise including lunch and tastings',
+                        'Perth Small Bars and Street Art walking tour',
+                        'Fremantle Food Lovers walking tour',
+                        `4 nights' stay in a Guest Room at Rendezvous Hotel Perth Central, including daily breakfast`
+                    ],
+                    validUntil: '31 March 2023',
+                    days: 5,
+                    price: '685'
+                },
+                {
+                    location: 'Perth',
+                    heading: 'Wild About Perth: The Perfect Long Weekend Adventure',
+                    description: 'Dolphins, ziplines and exciting city rambles',
+                    images: [
+                        'deal-2-image-01.png', 
+                        'deal-2-image-02.png', 
+                        'deal-2-image-03.png', 
+                        'deal-2-image-04.png', 
+                        'deal-2-image-05.png'
+                    ],
+                    details: [
+                        'Swim with wild dolphins with Perth Wildlife Encounters',
+                        'Twilight Matagarup Zip+Climb experience',
+                        'Perth Experience Rickshaw Tour',
+                        `3 nights' stay at Adina Apartment Hotel Perth Barrack Plaza`
+                    ],
+                    validUntil: '31 March 2023',
+                    days: 4,
+                    price: '779'
+                },
+                {
+                    location: 'Kununurra',
+                    heading: 'Kununurra Marvels: 5-Day Outback Adventure',
+                    description: 'A jam-packed wilderness escape',
+                    images: [
+                        'deal-3-image-01.png', 
+                        'deal-3-image-02.png', 
+                        'deal-3-image-03.png', 
+                        'deal-3-image-04.png', 
+                        'deal-3-image-05.png'
+                    ],
+                    details: [
+                        'Ord River Discoverer sunset tour including Lake Argyle',
+                        'Scenic flight over the Bungle Bungle Range in World Heritage-listed Purnululu National Park',
+                        '5 days 4WD car rental',
+                        `2 nights’ stay at the historic El Questro and 2 nights' stay at Discovery Parks – Lake Kununurra`
+                    ],
+                    validUntil: '31 March 2023',
+                    days: 5,
+                    price: '1,749'
+                },
+                {
+                    location: 'Kununurra',
+                    heading: 'The Ultimate East Kimberley Experience',
+                    description: 'Gorges, glamping, rich cultural explorations and far more',
+                    images: [
+                        'deal-4-image-01.png', 
+                        'deal-4-image-02.png', 
+                        'deal-4-image-03.png', 
+                        'deal-4-image-04.png', 
+                        'deal-4-image-05.png'
+                    ],
+                    details: [
+                        '2-day Purnululu National Park Experience including glamping',
+                        'Ord River Discoverer with Sunset Tour and Waringarri Arts Cultural Sunset Tour',
+                        'Scenic flight over the Bungle Bungle Range in World Heritage-listed Purnululu National Park',
+                        `4 nights' stay at Discovery Parks – Lake Kununurra`
+                    ],
+                    validUntil: '31 March 2023',
+                    days: 6,
+                    price: '2,499'
+                }
+            ],
+            secondaryDeals: [
+                {
+                    location: 'Perth',
+                    heading: 'Glamping Getaway: Perth and Rottnest Island Adventure',
+                    description: '6-Day Perth City Break with Rottnest Island Glamping',
+                    image: 'second-deal-image-01.png',
+                    price: '849'
+                },
+                {
+                    location: 'Perth to Exmouth',
+                    heading: 'Journey Along Australia’s Coral Coast',
+                    description: '10-Day Perth to Exmouth Return Adventure',
+                    image: 'second-deal-image-02.png',
+                    price: '2,299'
+                },
+                {
+                    location: 'Southern WA',
+                    heading: 'Highlights of the South West',
+                    description: '5-Day Margaret River and Albany Adventure',
+                    image: 'second-deal-image-03.png',
+                    price: '1,895'
+                },
+                {
+                    location: 'Ningaloo Reef',
+                    heading: 'WA Highlights: A Reef to Outback Adventure',
+                    description: '8-Day Ningaloo Reef and Karijini Adventure',
+                    image: 'second-deal-image-04.png',
+                    price: '4,055'
+                },
+                {
+                    location: 'The Kimberley',
+                    heading: 'Kimberley Wilderness Adventure',
+                    description: '9-Day Premium Kimberley and the Bungle Bungle Range',
+                    image: 'second-deal-image-05.png',
+                    price: '10,285'
+                }
+            ],
             categoryItem: [
                 {
                     heading: 'Explore Activities',
                     text: 'Unique things to do for every kind of holiday',
-                    image: '/images/Category-01.png'
+                    image: 'category-01.png'
                 },
                 {
                     heading: 'Find Places to Stay',
                     text: 'Cosy retreats and city breaks for every budget',
-                    image: '/images/Category-02.png'
+                    image: 'category-02.png'
                 },
                 {
                     heading: 'Search Flights',
                     text: 'Flights to suit your calendar',
-                    image: '/images/Category-03.png'
+                    image: 'category-03.png'
                 }
             ]
         }
