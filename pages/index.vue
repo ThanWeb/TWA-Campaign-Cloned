@@ -73,6 +73,21 @@
                 </p>
             </div>
         </div>
+        <div class="articles-section">
+            <header class="uppercase">
+                <h1 class="header-border">
+                    Plan your trip
+                </h1>
+                <p>Go-to guides for your next wander out yonder</p>
+            </header>
+            <div>
+                <ArticleCard 
+                    v-for="(article, index) in articles"
+                    v-bind="article"
+                    :key="index"
+                />
+            </div>
+        </div>
         <div class="creaseys-videos-section">
             <div>
                 <VideoCard 
@@ -258,10 +273,17 @@
 <script lang='ts'>
 interface Data {
     videoBackgroundHeight: string,
+    articles: Array<Articles>,
     creaseysVideos: Array<CreaseysVideos>,
     mainDeals: Array<MainDeals>,
     secondaryDeals: Array<SecondaryDeals>,
     categoryItem: Array<CategoryItem>
+}
+
+interface Articles {
+    category: string,
+    title: string,
+    image: string
 }
 
 interface CreaseysVideos {
@@ -301,6 +323,18 @@ export default {
     data (): Data {
         return {
             videoBackgroundHeight: '0',
+            articles: [
+                {
+                    category: 'Beaches & Bars',
+                    title: `See Perth Like a Local: Your Best-of Guide to WA's Evocative Capital`,
+                    image: 'article-01.png'
+                },
+                {
+                    category: 'Outback & Wildlife',
+                    title: 'Adventure in the East Kimberley: Your Definitive Guide to Kununurra',
+                    image: 'article-02.png'
+                }
+            ],
             creaseysVideos: [
                 {
                     heading: 'JOEL CREASEY’S EAST KIMBERLEY ADVENTURE',
