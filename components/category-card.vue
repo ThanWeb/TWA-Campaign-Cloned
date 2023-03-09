@@ -3,11 +3,12 @@
         <img 
             :src="`/images/categories/${image}`" 
             :alt="heading"
+            class="mb-3 rounded-lg"
         >
-        <h3>
+        <h3 class="text-xl font-semibold mb-1">
             {{ heading }}
         </h3>
-        <p>
+        <p class="text-base category-desc mb-4">
             {{ description }}
         </p>
     </div>
@@ -34,5 +35,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+    .category-desc {
+        color: #6B7280;
+    }
 </style>

@@ -131,7 +131,7 @@
                     :key="index"
                 />
             </div>
-            <div class="flex flex-col gap-y-4">
+            <div class="flex flex-col">
                 <CategoryCard 
                     v-for="(item, index) in categoryItem"
                     v-bind="item" 
@@ -139,7 +139,7 @@
                 />
             </div>
         </div>
-        <div class="policies-section px-6 pt-10 pb-12 flex flex-col gap-y-10">
+        <div class="policies-section mt-8 px-6 pb-12 flex flex-col gap-y-10">
             <div class="flex items-start gap-x-4">
                 <img 
                     src="/images/icons/icon-headset.svg" 
@@ -326,7 +326,7 @@ interface SecondaryDeals {
 
 interface CategoryItem {
     heading: string,
-    text: string,
+    description: string,
     image: string
 }
 
@@ -506,17 +506,17 @@ export default {
             categoryItem: [
                 {
                     heading: 'Explore Activities',
-                    text: 'Unique things to do for every kind of holiday',
+                    description: 'Unique things to do for every kind of holiday',
                     image: 'category-01.png'
                 },
                 {
                     heading: 'Find Places to Stay',
-                    text: 'Cosy retreats and city breaks for every budget',
+                    description: 'Cosy retreats and city breaks for every budget',
                     image: 'category-02.png'
                 },
                 {
                     heading: 'Search Flights',
-                    text: 'Flights to suit your calendar',
+                    description: 'Flights to suit your calendar',
                     image: 'category-03.png'
                 }
             ]

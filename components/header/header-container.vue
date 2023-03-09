@@ -132,7 +132,7 @@ export default {
     }
 
     .main-header {
-        height: 100px;
+        height: 88px;
     }
 
     .main-nav {
