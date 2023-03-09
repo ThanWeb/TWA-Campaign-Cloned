@@ -49,7 +49,7 @@
                     Otherworldly, wild, magnificent – this is Western Australia
                 </h1>
             </header>
-            <div>
+            <article>
                 <p class="mb-6 text-base">
                     The westernmost part of Australia is a place of unimaginable
                     beauty, where stark outback plains are interrupted by otherworldly
@@ -71,7 +71,18 @@
                 <p class="text-base">
                     You saw Joel Creasey wander out yonder – now it's your turn.
                 </p>
-            </div>
+            </article>
+            <ul>
+                <li 
+                    v-for="(image, index) in galeryImages"
+                    :key="index"
+                >
+                    <img 
+                        :src="`/images/overview/${image}`"
+                        :alt="`Image-${index + 1}`"
+                    >
+                </li>
+            </ul>
         </div>
         <div class="articles-section">
             <header class="uppercase">
@@ -273,6 +284,7 @@
 <script lang='ts'>
 interface Data {
     videoBackgroundHeight: string,
+    galeryImages: Array<string>,
     articles: Array<Articles>,
     creaseysVideos: Array<CreaseysVideos>,
     mainDeals: Array<MainDeals>,
@@ -323,6 +335,13 @@ export default {
     data (): Data {
         return {
             videoBackgroundHeight: '0',
+            galeryImages: [
+                'mini-gallery-image-01.png',
+                'mini-gallery-image-02.png',
+                'mini-gallery-image-03.png',
+                'mini-gallery-image-04.png',
+                'mini-gallery-image-05.png'
+            ],
             articles: [
                 {
                     category: 'Beaches & Bars',
