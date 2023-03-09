@@ -5,7 +5,7 @@
     >
         <div 
             class="main-header w-screen flex px-4 py-6 gap-x-4 items-center"
-            :class="{'bg-white z-10' : isMainNavShowed}"
+            :class="isMainNavShowed ? 'bg-white z-10' : 'custom-border'"
         >
             <button 
                 type="button" 
@@ -29,8 +29,9 @@
                 :class="{'active' : isMainNavShowed}"
             >
             <a 
+                v-if="!isMainNavShowed"
                 href="#book-now-section"
-                class="book-now-header hidden lg:block rounded-3xl book-now-button mx-6 uppercase py-3 font-semibold tracking-widest text-center"
+                class="book-now-header hidden lg:block rounded-3xl book-now-button mx-3 uppercase py-3 font-semibold tracking-widest text-center"
             >
                 Book Now
             </a>

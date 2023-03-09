@@ -541,7 +541,10 @@ export default {
         justify-content: space-between;
         top: 0;
         z-index: 10;
-        border-bottom: 1px solid #D1D5DB;
+        
+        &.custom-border {
+            border-bottom: 1px solid #D1D5DB;
+        }
     }
  
     .scrolled .book-now-header {
