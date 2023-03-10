@@ -20,7 +20,7 @@
                     ${{ price }}
                 </span>
             </p>
-            <button class="text-sm w-full leading-6 rounded-3xl view-package-button uppercase py-3 font-semibold tracking-widest text-center">
+            <button class="w-full leading-6 rounded-3xl view-package-button uppercase py-3 font-semibold tracking-widest text-center">
                 View Package
             </button>
         </div>

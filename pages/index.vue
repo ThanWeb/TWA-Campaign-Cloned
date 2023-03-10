@@ -108,23 +108,33 @@
                 />
             </div>
         </div>
-        <div class="choose-deals-section">
-            <DealsCarousel 
-                v-for="(deals, index) in mainDeals"
-                v-bind="deals"
-                :key="index"
-            />
+        <div class="choose-deals-section px-6 py-12">
+            <header class="uppercase text-white mb-6">
+                <h1 class="header-border mb-2 tracking-widest">
+                    Choose Your Adventure
+                </h1>
+                <p class="text-sm tracking-widest">
+                    Follow in the footsteps of wa's ‘best’ tour guide joel creasey with these unforgettable trips, as seen on network 10
+                </p>
+            </header>
+            <div class="flex flex-col gap-y-6">
+                <DealsCarousel 
+                    v-for="(deals, index) in mainDeals"
+                    v-bind="deals"
+                    :key="index"
+                />
+            </div>
         </div>
         <div class="you-may-also-like-section px-6 mt-12"> 
             <header class="uppercase">
-                <h1 class="header-border mb-2">
+                <h1 class="header-border mb-2 tracking-widest">
                     You May Also Like
                 </h1>
-                <p class="text-sm">
+                <p class="text-sm tracking-widest">
                     spectacular WA trips Joel didn’t get to take (but you can)
                 </p>
             </header>
-            <div class="my-6 overflow-auto scroll-height-0">
+            <div class="py-6 overflow-auto scroll-height-0">
                 <table class="min-w-full">
                     <tbody>
                         <tr class="flex items-start gap-x-4">
@@ -551,7 +561,7 @@ export default {
         z-index: 10;
         
         &.custom-border {
-            border-bottom: 1px solid #D1D5DB;
+            border-bottom: 1px solid $gray-lighter;
         }
     }
  
@@ -579,6 +589,23 @@ export default {
         }
     }
 
+    .box-orient-vertical {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+    }
+    .line-clamp-1 {
+        -webkit-line-clamp: 1;
+        line-clamp: 1; 
+    }
+    .line-clamp-2 {
+        -webkit-line-clamp: 2;
+        line-clamp: 2; 
+    }
+
+    .choose-deals-section {
+        background-color: $gray-darkest;
+    }
+
     .policies-section {
         &:before {
             content: "";
@@ -593,11 +620,11 @@ export default {
         background-color: $gray-lightest;
 
         .input-form {
-            border: 1px solid #D1D5DB;
+            border: 1px solid $gray-lighter;
         }
 
         .submit-form {
-            background-color: #D1D5DB;
+            background-color: $gray-lighter;
         }
     }
 </style>
