@@ -3,25 +3,28 @@
         <img 
             :src="`/images/secondary-deals/${image}`" 
             :alt="heading"
+            class="rounded-t-lg"
         >
-        <span>
-            {{ location }}
-        </span>
-        <h3>
-            {{ heading }}
-        </h3>
-        <p>
-            {{ description }}
-        </p>
-        <p>
-            Starts from $
-            <span>
-                {{ price }}
+        <div class="p-4 rounded-b-lgx">
+            <span class="uppercase text-xs leading-5">  
+                {{ location }}
             </span>
-        </p>
-        <button>
-            View Package
-        </button>
+            <h3 class="text-xl font-semibold mb-2 overflow-hidden text-ellipsis box-orient-vertical line-clamp-2">
+                {{ heading }}
+            </h3>
+            <p class="text-base mb-3 overflow-hidden text-ellipsis box-orient-vertical line-clamp-1">
+                {{ description }}
+            </p>
+            <p class="text-xs mb-2">
+                Starts from<br>
+                <span class="text-xl font-semibold">
+                    ${{ price }}
+                </span>
+            </p>
+            <button class="text-sm w-full leading-6 rounded-3xl book-now-button uppercase py-3 font-semibold tracking-widest text-center">
+                View Package
+            </button>
+        </div>
     </div>
 </template>
 
@@ -54,5 +57,20 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+    .deals-card {
+        box-shadow: 0px 20px 25px -5px rgba(0, 0, 0, 0.04), 0px 10px 10px -5px rgba(0, 0, 0, 0.02);
+    }
 
+    .box-orient-vertical {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+    }
+    .line-clamp-1 {
+        -webkit-line-clamp: 1;
+        line-clamp: 1; 
+    }
+    .line-clamp-2 {
+        -webkit-line-clamp: 2;
+        line-clamp: 2; 
+    }
 </style>
