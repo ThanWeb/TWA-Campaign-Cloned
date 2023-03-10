@@ -36,6 +36,6 @@ export default {
 
 <style lang="scss" scoped>
     .category-desc {
-        color: #6B7280;
+        color: $gray-med;
     }
 </style>

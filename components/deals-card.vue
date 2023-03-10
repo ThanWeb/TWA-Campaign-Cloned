@@ -1,11 +1,10 @@
 <template>
-    <div class="deals-card">
+    <div class="deals-card rounded-lg overflow-hidden">
         <img 
             :src="`/images/secondary-deals/${image}`" 
             :alt="heading"
-            class="rounded-t-lg"
         >
-        <div class="p-4 rounded-b-lgx">
+        <div class="p-4">
             <span class="uppercase text-xs leading-5">  
                 {{ location }}
             </span>
@@ -21,7 +20,7 @@
                     ${{ price }}
                 </span>
             </p>
-            <button class="text-sm w-full leading-6 rounded-3xl book-now-button uppercase py-3 font-semibold tracking-widest text-center">
+            <button class="text-sm w-full leading-6 rounded-3xl view-package-button uppercase py-3 font-semibold tracking-widest text-center">
                 View Package
             </button>
         </div>
@@ -61,16 +60,9 @@ export default {
         box-shadow: 0px 20px 25px -5px rgba(0, 0, 0, 0.04), 0px 10px 10px -5px rgba(0, 0, 0, 0.02);
     }
 
-    .box-orient-vertical {
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-    }
-    .line-clamp-1 {
-        -webkit-line-clamp: 1;
-        line-clamp: 1; 
-    }
-    .line-clamp-2 {
-        -webkit-line-clamp: 2;
-        line-clamp: 2; 
+    .view-package-button {
+        font-size: 15px;
+        color: $gray-darker;
+        border: 1px solid $gray-darker;
     }
 </style>

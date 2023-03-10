@@ -163,7 +163,7 @@ export default {
         border-left: 1px solid $white;
 
         &.active {
-            border-left: 1px solid #D1D5DB;
+            border-left: 1px solid $gray-lighter;
         }
     }
 
