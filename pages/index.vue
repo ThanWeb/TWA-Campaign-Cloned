@@ -108,7 +108,14 @@
                 />
             </div>
         </div>
-        <div class="you-may-also-like-section px-6">
+        <div class="choose-deals-section">
+            <DealsCarousel 
+                v-for="(deals, index) in mainDeals"
+                v-bind="deals"
+                :key="index"
+            />
+        </div>
+        <div class="you-may-also-like-section px-6 mt-12"> 
             <header class="uppercase">
                 <h1 class="header-border mb-2">
                     You May Also Like
@@ -117,19 +124,20 @@
                     spectacular WA trips Joel didn’t get to take (but you can)
                 </p>
             </header>
-            <div>
-                <DealsCarousel 
-                    v-for="(deals, index) in mainDeals"
-                    v-bind="deals"
-                    :key="index"
-                />
-            </div>
-            <div class="my-6">
-                <DealsCard 
-                    v-for="(deals, index) in secondaryDeals"
-                    v-bind="deals"
-                    :key="index"
-                />
+            <div class="my-6 overflow-auto scroll-height-0">
+                <table class="min-w-full">
+                    <tbody>
+                        <tr class="flex items-start gap-x-4">
+                            <td
+                                v-for="(deals, index) in secondaryDeals"
+                                :key="index"
+                                class="w-72"
+                            >
+                                <DealsCard v-bind="deals" />
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
             <div class="flex flex-col">
                 <CategoryCard 
@@ -563,6 +571,12 @@ export default {
     .small-text {
         font-size: 10px;
         letter-spacing: 3px;
+    }
+
+    .scroll-height-0 {
+        &::-webkit-scrollbar {
+            height: 0;
+        }
     }
 
     .policies-section {
