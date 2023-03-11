@@ -104,6 +104,7 @@
                     v-for="(video, index) in creaseysVideos"
                     v-bind="video"
                     :key="index"
+                    :index="index"
                 />
             </div>
         </div>
