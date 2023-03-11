@@ -43,13 +43,13 @@
                 </div>
             </div>
         </div>
-        <div class="overview-section mt-6 mb-12 mx-6">
-            <header>
+        <div class="overview-section mt-6 mb-12">
+            <header class="mx-6">
                 <h1 class="header-border py-6">
                     Otherworldly, wild, magnificent – this is Western Australia
                 </h1>
             </header>
-            <article>
+            <article class="mx-6">
                 <p class="mb-6 text-base">
                     The westernmost part of Australia is a place of unimaginable
                     beauty, where stark outback plains are interrupted by otherworldly
@@ -72,26 +72,25 @@
                     You saw Joel Creasey wander out yonder – now it's your turn.
                 </p>
             </article>
-            <ul>
-                <li 
+            <figure class="flex mt-12 overflow-hidden">
+                <img 
                     v-for="(image, index) in galeryImages"
                     :key="index"
+                    :src="`/images/overview/${image}`"
+                    :alt="`Image-${index + 1}`"
                 >
-                    <img 
-                        :src="`/images/overview/${image}`"
-                        :alt="`Image-${index + 1}`"
-                    >
-                </li>
-            </ul>
+            </figure>
         </div>
-        <div class="articles-section">
-            <header class="uppercase">
-                <h1 class="header-border">
+        <div class="articles-section px-6 pb-12">
+            <header class="uppercase mb-6">
+                <h1 class="header-border mb-2 tracking-widest">
                     Plan your trip
                 </h1>
-                <p>Go-to guides for your next wander out yonder</p>
+                <p class="text-sm tracking-widest">
+                    Go-to guides for your next wander out yonder
+                </p>
             </header>
-            <div>
+            <div class="flex flex-col gap-y-6">
                 <ArticleCard 
                     v-for="(article, index) in articles"
                     v-bind="article"
@@ -99,8 +98,8 @@
                 />
             </div>
         </div>
-        <div class="creaseys-videos-section">
-            <div>
+        <div class="creaseys-videos-section pb-12 px-6">
+            <div class="flex flex-col gap-y-4">
                 <VideoCard 
                     v-for="(video, index) in creaseysVideos"
                     v-bind="video"
@@ -313,7 +312,8 @@ interface Data {
 interface Articles {
     category: string,
     title: string,
-    image: string
+    image: string,
+    articleLink: string
 }
 
 interface CreaseysVideos {
@@ -364,12 +364,14 @@ export default {
                 {
                     category: 'Beaches & Bars',
                     title: `See Perth Like a Local: Your Best-of Guide to WA's Evocative Capital`,
-                    image: 'article-01.png'
+                    image: 'article-01.png',
+                    articleLink: '/kimberley-guide-things-to-do'
                 },
                 {
                     category: 'Outback & Wildlife',
                     title: 'Adventure in the East Kimberley: Your Definitive Guide to Kununurra',
-                    image: 'article-02.png'
+                    image: 'article-02.png',
+                    articleLink: '/perth-guide-things-to-do'
                 }
             ],
             creaseysVideos: [
