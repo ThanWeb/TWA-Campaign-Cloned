@@ -55,6 +55,35 @@ export default {
         opacity: 0;
     }
 
+    .scrolled .main-header {
+        background-color: white;
+        position: fixed;
+        justify-content: space-between;
+        top: 0;
+        z-index: 10;
+        
+        &.custom-border {
+            border-bottom: 1px solid $gray-lighter;
+        }
+    }
+
+    .scrolled .article-layout .main-header {
+        justify-content: flex-start;
+    }
+ 
+    .scrolled .default-layout .book-now-header {
+        flex-basis: 40%;
+        display: block;
+    }
+
+    .scrolled .default-layout .logo {
+        display: none;
+    }
+
+    .scrolled .open-nav {
+        filter: invert(1);
+    }
+
     .header-border {
         font-size: 32px;
         line-height: 44px;
@@ -68,5 +97,35 @@ export default {
             margin-bottom: 24px;
             background: $primary-color;
         }
+    }
+
+    .small-text {
+        font-size: 10px;
+        letter-spacing: 3px;
+    }
+
+    .scroll-height-0 {
+        &::-webkit-scrollbar {
+            height: 0;
+        }
+    }
+
+    .box-orient-vertical {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+    }
+
+    .line-clamp-1 {
+        -webkit-line-clamp: 1;
+        line-clamp: 1; 
+    }
+    
+    .line-clamp-2 {
+        -webkit-line-clamp: 2;
+        line-clamp: 2; 
+    }
+
+    .choose-deals-section {
+        background-color: $gray-darkest;
     }
 </style>

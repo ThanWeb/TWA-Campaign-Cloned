@@ -31,11 +31,12 @@
             </button>
         </div>
         <div 
-            class="fixed z-50 inset-0 bg-black/[.8] p-6 flex flex-col "
+            class="fixed z-50 inset-0 bg-black/[.8] py-6 px-11 flex flex-col "
             :class="{'hidden' : !isModalShowed}"
         >
             <button 
                 class="flex items-center justify-end"
+                style="margin: 0 -20px;"
                 type="button"
                 @click="toggleModal"
             >
@@ -60,7 +61,6 @@
 </template>
 
 <script lang="ts">
-
 export default {
     props: {
         heading: {

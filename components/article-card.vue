@@ -14,7 +14,6 @@
             <NuxtLink
                 class="block w-full leading-6 rounded-3xl read-more-button uppercase py-3 font-semibold tracking-widest text-center"
                 :to="articleLink"
-                target="_blank"
             >
                 Read More
             </NuxtLink>
@@ -23,7 +22,6 @@
 </template>
 
 <script lang="ts">
-
 export default {
     props: {
         title: {
