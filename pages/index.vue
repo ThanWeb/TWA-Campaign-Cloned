@@ -1,9 +1,12 @@
 <template>
     <div>
-        <div class="hero-section">
+        <div 
+            class="hero-section overflow-hidden relative"
+            :style="`height: ${videoBackgroundHeight}px`"
+        >
             <figure 
                 id="video-background"
-                class="w-screen absolute inset-0 -z-20"
+                class="w-screen absolute -z-20"
             >
                 <video 
                     autoplay 
@@ -18,10 +21,10 @@
                 </video>
             </figure>
             <div 
-                class="pt-52 flex flex-col justify-between"
+                class="flex flex-col justify-between"
                 :style="`height: ${videoBackgroundHeight}px`"
             >
-                <div>
+                <div class="my-auto">
                     <img 
                         src="/images/logo/wander-out-yonder.svg"
                         alt="Wander Out Yonder"
