@@ -13,3 +13,35 @@ body {
     font-size: 12px;
     font-family: Inter, Arial, Helvetica, sans-serif;
 }
+
+.text-primary {
+    color: $primary-color;
+}
+
+.text-secondary {
+    color: $secondary-color;
+}
+
+.text-gray-darkest {
+    color: $gray-darkest;
+}
+
+.text-gray-darker {
+    color: $gray-darker;
+}
+
+.text-gray-dark {
+    color: $gray-dark;
+}
+
+.text-gray-med {
+    color: $gray-med;
+}
+
+.text-gray-lighter {
+    color: $gray-lighter;
+}
+
+.text-gray-lightest {
+    color: $gray-lightest;
+}
