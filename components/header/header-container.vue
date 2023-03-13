@@ -1,6 +1,6 @@
 <template>
     <header 
-        class="bg-transparent absolute w-full"
+        class="bg-transparent absolute w-full z-20"
         :class="{'h-screen w-screen inset-0 flex flex-col' : isMainNavShowed}"
     >
         <div 
@@ -74,12 +74,14 @@ export default {
         position: fixed;
         width: 100%;
         top: -100vh;
+        visibility: hidden;
         transition: 0.4s;
         transition-timing-function: cubic-bezier(.4,0,.2,1);
         transition-delay: 0s;
         z-index: -5;
 
         &.active {
+            visibility: visible;
             z-index: 5;
             top: 0;
         }

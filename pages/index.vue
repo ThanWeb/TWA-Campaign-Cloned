@@ -1,13 +1,7 @@
 <template>
     <div>
-        <div 
-            class="hero-section overflow-hidden relative"
-            :style="`height: ${videoBackgroundHeight}px`"
-        >
-            <figure 
-                id="video-background"
-                class="w-screen absolute -z-20"
-            >
+        <div class="hero-section overflow-hidden relative height-viewport">
+            <figure class="w-screen absolute -z-20">
                 <video 
                     autoplay 
                     muted
@@ -20,30 +14,25 @@
                     >
                 </video>
             </figure>
-            <div 
-                class="flex flex-col justify-between"
-                :style="`height: ${videoBackgroundHeight}px`"
-            >
-                <div class="my-auto">
-                    <img 
-                        src="/images/logo/wander-out-yonder.svg"
-                        alt="Wander Out Yonder"
-                        class="px-16 pt-8 mx-auto mb-0"
-                    >
-                    <p class="text-white text-center uppercase mt-8 font-semibold small-text">
-                        It’s time for your next adventure
-                    </p>
-                </div>
-                <div>
-                    <p class="mt-4 text-white text-center uppercase mt-8 font-semibold small-text">
-                        More Details
-                    </p>
-                    <img 
-                        src="/images/icons/more-detail.svg"
-                        alt="More Detail"
-                        class="mx-auto mt-2 mb-0 h-14"
-                    >
-                </div>
+            <div class="absolute my-auto inset-y-1/4">
+                <img 
+                    src="/images/logo/wander-out-yonder.svg"
+                    alt="Wander Out Yonder"
+                    class="px-16 pt-8 mx-auto mb-0"
+                >
+                <p class="text-white text-center uppercase mt-8 font-semibold small-text">
+                    It’s time for your next adventure
+                </p>
+            </div>
+            <div class="absolute bottom-0 inset-x-1/4">
+                <p class="mt-4 text-white text-center uppercase mt-8 font-semibold small-text">
+                    More Details
+                </p>
+                <img 
+                    src="/images/icons/more-detail.svg"
+                    alt="More Detail"
+                    class="mx-auto mt-2 mb-0 h-14"
+                >
             </div>
         </div>
         <div class="overview-section mt-6 mb-12">
@@ -551,14 +540,21 @@ export default {
     },
     methods: {
         getVideoBackgroundHeight() {
-            const videoBgHeight = document.querySelector('#video-background')?.clientHeight
-            this.videoBackgroundHeight = `${videoBgHeight}`
+            // const videoBgHeight = document.querySelector('#video-background')?.clientHeight
+            // this.videoBackgroundHeight = `${videoBgHeight}`
+            const vh = window.innerHeight * 0.01
+            document?.documentElement.style.setProperty('--vh', `${vh}px`)
         }
     }
 }
 </script>
 
 <style lang="scss" scoped>
+    .height-viewport {
+        height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+        height: calc(var(--vh, 1vh) * 100);
+    }
+
     .policies-section {
         &:before {
             content: "";
