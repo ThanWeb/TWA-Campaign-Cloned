@@ -1,6 +1,6 @@
 <template>
     <header 
-        class="article-header-layout bg-white absolute w-full"
+        class="article-header-layout bg-white w-full"
         :class="{'h-screen w-screen inset-0 flex flex-col' : isMainNavShowed}"
     >
         <div 

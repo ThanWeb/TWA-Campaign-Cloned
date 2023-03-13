@@ -66,7 +66,7 @@ export default {
     }
 
     .main-header {
-        height: 88px;
+        height: $header-height;
     }
 
     .main-nav {

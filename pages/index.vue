@@ -358,13 +358,13 @@ export default {
                     category: 'Beaches & Bars',
                     title: `See Perth Like a Local: Your Best-of Guide to WA's Evocative Capital`,
                     image: 'perth-1@2x.png',
-                    articleLink: '/kimberley-guide-things-to-do'
+                    articleLink: '/perth-guide-things-to-do'
                 },
                 {
                     category: 'Outback & Wildlife',
                     title: 'Adventure in the East Kimberley: Your Definitive Guide to Kununurra',
                     image: 'kimberley-1@2x.png',
-                    articleLink: '/perth-guide-things-to-do'
+                    articleLink: '/kimberley-guide-things-to-do'
                 }
             ],
             creaseysVideos: [
