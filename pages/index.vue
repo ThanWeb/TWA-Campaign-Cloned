@@ -83,7 +83,7 @@
                 </p>
             </header>
             <div class="flex flex-col gap-y-6">
-                <ArticleCard 
+                <LandingArticleCard 
                     v-for="(article, index) in articles"
                     v-bind="article"
                     :key="index"
@@ -92,7 +92,7 @@
         </div>
         <div class="creaseys-videos-section pb-12 px-6">
             <div class="flex flex-col gap-y-4">
-                <VideoCard 
+                <LandingVideoCard 
                     v-for="(video, index) in creaseysVideos"
                     v-bind="video"
                     :key="index"
@@ -110,7 +110,7 @@
                 </p>
             </header>
             <div class="flex flex-col gap-y-6">
-                <DealsCarousel 
+                <LandingDealsCarousel 
                     v-for="(deals, index) in mainDeals"
                     v-bind="deals"
                     :key="index"
@@ -135,14 +135,14 @@
                                 :key="index"
                                 class="w-72"
                             >
-                                <DealsCard v-bind="deals" />
+                                <LandingDealsCard v-bind="deals" />
                             </td>
                         </tr>
                     </tbody>
                 </table>
             </div>
             <div class="flex flex-col">
-                <CategoryCard 
+                <LandingCategoryCard 
                     v-for="(item, index) in categoryItem"
                     v-bind="item" 
                     :key="index"
