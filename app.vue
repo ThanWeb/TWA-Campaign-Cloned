@@ -56,7 +56,7 @@ export default {
         opacity: 0;
     }
 
-    .scrolled .main-container {
+    .scrolled .article-layout .main-container {
         padding-top: $header-height;
     }
 
