@@ -100,7 +100,10 @@
                 />
             </div>
         </div>
-        <div class="choose-deals-section px-6 py-12">
+        <div 
+            id="choose-your-adventure"
+            class="choose-deals-section px-6 py-12"
+        >
             <header class="uppercase text-white mb-6">
                 <h1 class="header-border mb-2 tracking-widest">
                     Choose Your Adventure

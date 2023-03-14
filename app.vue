@@ -99,6 +99,24 @@ export default {
         }
     }
 
+    .article-layout .header-border {
+        &:before {
+            margin-bottom: 16px;
+            width: 64px;
+        }
+    }
+
+    .footer-border {
+        &:after {
+            content: "";
+            display: block;
+            width: 24px;
+            height: 3px;
+            margin-top: 24px;
+            background: $gray-lighter;
+        }
+    }
+
     .small-text {
         font-size: 10px;
         letter-spacing: 3px;
