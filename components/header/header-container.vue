@@ -18,12 +18,12 @@
                 >
             </button>
             <img 
-                :src="isMainNavShowed ? '/images/logo/10travlr-default.svg' : '/images/logo/10travlr-inverted.svg'"
+                :src="isMainNavShowed ? '/images/logo/10Travlr-Default.svg' : '/images/logo/10Travlr-Inverted.svg'"
                 alt="10Travlr"
                 class="travlr-logo logo"
             >
             <img 
-                :src="isMainNavShowed ? '/images/logo/wa-default.svg' : '/images/logo/wa-inverted.svg'"
+                :src="isMainNavShowed ? '/images/logo/WA-Default.svg' : '/images/logo/WA-Inverted.svg'"
                 alt="Western Australia"
                 class="western-australia-logo logo pl-4"
                 :class="{'active' : isMainNavShowed}"

@@ -27,12 +27,12 @@
                 >
             </NuxtLink>
             <img 
-                src="/images/logo/10travlr-default.svg"
+                src="/images/logo/10Travlr-Default.svg"
                 alt="10Travlr"
                 class="travlr-logo logo"
             >
             <img 
-                src="/images/logo/wa-default.svg"
+                src="/images/logo/WA-Default.svg"
                 alt="Western Australia"
                 class="western-australia-logo logo pl-4"
                 :class="{'active' : isMainNavShowed}"
