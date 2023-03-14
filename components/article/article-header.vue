@@ -4,19 +4,20 @@
             <p class="text-center text-gray-darker font-normal mb-3 text-base tracking-widest uppercase">
                 {{ category }}
             </p>
-            <h1 class="text-center text-gray-darkest font-normal mb-6 text-2xl tracking-widest uppercase px-4 leading-6">
+            <h1 class="text-center text-gray-darkest font-normal mb-6 text-2xl tracking-widest uppercase px-4 leading-6 max-w-screen-sm mx-auto">
                 {{ title }}
             </h1>
             <img 
+                class="main-image w-full object-cover"
                 :src="`/images/articles/${image}`" 
                 :alt="title"
             >
-            <p class="text-xs text-gray-darker font-normal my-2 px-4">
+            <p class="text-xs text-gray-darker font-normal my-2 px-4 sm:px-6">
                 {{ imageDescription }}
             </p>
         </div>
         <div>
-            <div class="header-border px-4 pt-10 text-gray-darkest">
+            <div class="header-border px-4 sm:px-6 pt-10 text-gray-darkest">
                 <p class="mb-1 font-bold text-base">
                     {{ writer }}
                 </p>
@@ -24,7 +25,7 @@
                     {{ date }}
                 </p>
             </div>
-            <p class="text-gray-darkest my-6 px-4 text-2xl font-normal">
+            <p class="text-gray-darkest my-6 px-4 sm:px-6 text-2xl font-normal">
                 {{ summary }}
             </p>
         </div>
@@ -65,3 +66,11 @@ export default {
     }
 }
 </script>
+
+<style lang="scss" scoped>
+    .main-image {
+        @media screen and (min-width: 640px) {
+            height: 360px;
+        }
+    }
+</style>

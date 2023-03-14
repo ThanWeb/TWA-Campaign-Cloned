@@ -1,9 +1,9 @@
 <template>
-    <div class="my-10 px-4">
+    <div class="my-10 px-4 sm:px-6">
         <img 
             :src="`/images/articles/${image}`" 
             :alt="imageDescription"
-            class="mb-2"
+            class="mb-2 article-image"
         >
         <p class="text-xs font-normal text-gray-darkest">
             {{ imageDescription }}
@@ -25,3 +25,12 @@ export default {
     }
 }
 </script>
+
+<style lang="scss" scoped>
+    .article-image {
+        @media screen and (min-width: 640px) {
+            max-width: 600px;
+            max-height: 600px;
+        }
+    }
+</style>

@@ -146,7 +146,11 @@ export default {
             color: $secondary-color;
             border: 1px solid $secondary-color;
         }
+
+        @media screen and (min-width: 640px) {
+            .book-now-header {
+                flex-basis: 25% !important;
+            }
+        }
     }
 </style>
-
-
