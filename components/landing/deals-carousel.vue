@@ -10,7 +10,7 @@
                         type="button"
                     >
                         <img 
-                            src="images/icons/carousel-arrow-left.svg" 
+                            src="/images/icons/carousel-arrow-left.svg" 
                             alt="Swipe left"
                         >
                     </button>
@@ -18,7 +18,7 @@
                         type="button"
                     >
                         <img 
-                            src="images/icons/carousel-arrow-right.svg" 
+                            src="/images/icons/carousel-arrow-right.svg" 
                             alt="Swipe right"
                         >
                     </button>
