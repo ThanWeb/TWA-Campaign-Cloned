@@ -155,4 +155,10 @@ export default {
     .invert-dark {
         filter: invert(1);
     }
+
+    .max-width-desktop {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
 </style>
