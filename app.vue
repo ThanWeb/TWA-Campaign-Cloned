@@ -1,9 +1,10 @@
 <template>
     <div :class="{'scrolled' : scrollY > 0}">
         <NuxtLayout>
-            <main>
+            <main class="main-container">
                 <NuxtPage />
             </main>
+            <DesktopShare />
         </NuxtLayout>
     </div>
 </template>
@@ -53,6 +54,10 @@ export default {
     .page-enter-from,
     .page-leave-to {
         opacity: 0;
+    }
+
+    .scrolled .main-container {
+        padding-top: $header-height;
     }
 
     .scrolled .main-header {
@@ -145,5 +150,9 @@ export default {
 
     .choose-deals-section {
         background-color: $gray-darkest;
+    }
+
+    .invert-dark {
+        filter: invert(1);
     }
 </style>

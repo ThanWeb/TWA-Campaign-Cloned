@@ -102,10 +102,6 @@ export default {
         }
     }
 
-    .invert-dark {
-        filter: invert(1);
-    }
-
     .book-now-button {
         font-size: 15px;
         color: $secondary-color;

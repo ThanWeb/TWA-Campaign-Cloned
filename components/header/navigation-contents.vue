@@ -38,7 +38,7 @@
                 </a>
             </li>
         </ul>
-        <div class="flex justify-center gap-x-8 items-center">
+        <div class="flex lg:hidden justify-center gap-x-8 items-center">
             <p>Share</p>
             <a 
                 href="https://www.facebook.com/sharer/sharer.php?u=https%3A//www.10travlr.com.au/western-australia-holiday-tours"

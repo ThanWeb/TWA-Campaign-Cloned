@@ -137,10 +137,6 @@ export default {
             border-left: 1px solid $gray-lighter;
         }
     
-        .invert-dark {
-            filter: invert(1);
-        }
-    
         .book-now-button {
             font-size: 15px;
             color: $secondary-color;
