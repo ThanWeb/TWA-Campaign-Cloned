@@ -74,10 +74,6 @@ export default {
         > div {
             justify-content: space-between;
         }
-        
-        &.custom-border {
-            border-bottom: 1px solid $gray-lighter;
-        }
     }
  
     .scrolled .default-layout .book-now-header {
@@ -214,6 +210,10 @@ export default {
         margin: 0 auto;
     }
 
+    .custom-border {
+        box-shadow: 0 1px 3px rgba(0,0,0,.1), 0 1px 2px rgba(0,0,0,.06);
+    }
+
     // Responsive    
     @media screen and (min-width: 640px) {
         .book-now-header {
@@ -244,7 +244,7 @@ export default {
 
         .lg-border {
             border-top: 1px solid $gray-lighter;
-            border-bottom: 1px solid $gray-lighter;
+            box-shadow: 0 1px 3px rgba(0,0,0,.1), 0 1px 2px rgba(0,0,0,.06);
         }
     }
 
