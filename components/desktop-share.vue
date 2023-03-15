@@ -1,6 +1,6 @@
 <template>
     <div class="h-screen fixed right-0 top-0 z-0 flex">
-        <div class="hidden lg:flex flex-col bg-white h-fit gap-y-4 p-3 items-center my-auto">
+        <div class="share-box hidden lg:flex flex-col bg-white h-fit gap-y-4 p-3 items-center my-auto">
             <p>Share:</p>
             <a 
                 href="https://www.facebook.com/sharer/sharer.php?u=https%3A//www.10travlr.com.au/western-australia-holiday-tours"
@@ -28,7 +28,7 @@
 </template>
 
 <style lang="scss" scoped>
-    div {
+    .share-box {
         box-shadow: 0 1px 5px rgb(0 0 0 / 6%);
     }
 

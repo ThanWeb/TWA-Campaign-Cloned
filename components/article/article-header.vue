@@ -12,7 +12,7 @@
                 :src="`/images/articles/${image}`" 
                 :alt="title"
             >
-            <p class="text-xs text-gray-darker font-normal my-2 px-4 sm:px-6">
+            <p class="text-xs text-gray-darker font-normal my-2 px-4 sm:px-6 lg:px-0">
                 {{ imageDescription }}
             </p>
         </div>

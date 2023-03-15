@@ -1,6 +1,6 @@
 <template>
     <footer class="bg-black text-white">
-        <div class="flex flex-col items-center py-12 max-width-desktop px-6">
+        <div class="flex flex-col items-center py-12 max-width-desktop px-6 custom-width mx-auto">
             <nav class="mb-4">
                 <ul class="lg:flex gap-x-4">
                     <li class="mb-6 text-center font-semibold text-sm">

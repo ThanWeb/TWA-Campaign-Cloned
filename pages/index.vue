@@ -14,18 +14,18 @@
                     >
                 </video>
             </figure>
-            <div class="absolute my-auto inset-y-1/4">
+            <div class="absolute my-auto inset-y-1/4 w-full">
                 <img 
                     src="/images/logo/wander-out-yonder.svg"
                     alt="Wander Out Yonder"
-                    class="px-16 pt-8 mx-auto mb-0"
+                    class="w-80 mb-0 mx-auto"
                 >
                 <p class="text-white text-center uppercase mt-8 font-semibold small-text">
                     It’s time for your next adventure
                 </p>
             </div>
-            <div class="absolute bottom-0 inset-x-1/4">
-                <p class="mt-4 text-white text-center uppercase mt-8 font-semibold small-text">
+            <div class="absolute bottom-0 w-full">
+                <p class="mt-4 mx-auto text-white text-center uppercase mt-8 font-semibold small-text">
                     More Details
                 </p>
                 <img 

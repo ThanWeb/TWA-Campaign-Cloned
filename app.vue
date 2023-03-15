@@ -1,5 +1,8 @@
 <template>
-    <div :class="{'scrolled' : scrollY > 0}">
+    <div
+        class="overflow-hidden" 
+        :class="{'scrolled' : scrollY > 0}"
+    >
         <NuxtLayout>
             <main class="main-container">
                 <NuxtPage />
@@ -40,6 +43,7 @@ export default {
 </script>
 
 <style lang="scss">
+    // General
     * {
         margin: 0;
         padding: 0;
@@ -56,6 +60,7 @@ export default {
         opacity: 0;
     }
 
+    // Scrolled
     .scrolled .article-layout .main-container {
         padding-top: $header-height;
     }
@@ -63,17 +68,16 @@ export default {
     .scrolled .main-header {
         background-color: white;
         position: fixed;
-        justify-content: space-between;
         top: 0;
         z-index: 10;
+
+        > div {
+            justify-content: space-between;
+        }
         
         &.custom-border {
             border-bottom: 1px solid $gray-lighter;
         }
-    }
-
-    .scrolled .article-layout .main-header {
-        justify-content: flex-start;
     }
  
     .scrolled .default-layout .book-now-header {
@@ -85,10 +89,17 @@ export default {
         display: none;
     }
 
+    .scrolled .article-layout .main-header {
+        > div {
+            justify-content: flex-start;
+        }
+    }
+
     .scrolled .open-nav {
         filter: invert(1);
     }
 
+    // Header landing and article
     .header-border {
         font-size: 32px;
         line-height: 44px;
@@ -109,6 +120,45 @@ export default {
             margin-bottom: 16px;
             width: 64px;
         }
+    }
+
+    .main-header {
+        height: $header-height;
+    }
+
+    .main-nav {
+        display: flex;
+        position: fixed;
+        width: 100%;
+        top: 80px;
+        opacity: 0;
+        transition: 0.4s;
+        transition-timing-function: cubic-bezier(.4,0,.2,1);
+        transition-delay: 0s;
+        z-index: -5;
+    }
+
+    .logo {
+        height: 40px;
+    }
+
+    .travlr-logo {
+        width: 100px;
+    }
+
+    .western-australia-logo {
+        width: 140px;
+    }
+
+    .book-now-button {
+        font-size: 15px;
+        color: $secondary-color;
+        border: 1px solid $secondary-color;
+    }
+
+    // Helperss
+    .custom-width {
+        width: 100%;
     }
 
     .footer-border {
@@ -160,5 +210,45 @@ export default {
         width: 100%;
         max-width: 1200px;
         margin: 0 auto;
+    }
+
+    // Responsive    
+    @media screen and (min-width: 640px) {
+        .book-now-header {
+            flex-basis: 25% !important;
+        }
+    }
+
+    @media screen and (min-width: 1024px) {
+        .custom-width {
+            width: 980px;
+        }
+
+        .travlr-logo, .western-australia-logo {
+            width: auto;
+        }
+
+        .travlr-logo {
+            height: 48px;
+        }
+
+        .western-australia-logo {
+            height: 32px;
+        }
+
+        .book-now-header {
+            flex-basis: 15% !important;
+        }
+
+        .lg-border {
+            border-top: 1px solid $gray-lighter;
+            border-bottom: 1px solid $gray-lighter;
+        }
+    }
+
+    @media screen and (min-width: 1280px) {
+        .custom-width {
+            width: 1200px;
+        }
     }
 </style>

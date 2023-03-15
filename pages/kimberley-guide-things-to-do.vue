@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="custom-width mx-auto">
         <ArticleHeader 
             :category="'Outback & Wildlife'"
             :title="'Adventure in the East Kimberley: Your definitive guide to Kununurra and beyond'"

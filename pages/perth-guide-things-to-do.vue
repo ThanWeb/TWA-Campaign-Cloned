@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="custom-width mx-auto">
         <ArticleHeader 
             :category="'Beaches & Bars'"
             :title="'See Perth Like a Local: Your Best-of Guide to WA&lsquo;s Evocative Capital'"
