@@ -35,7 +35,10 @@
                 >
             </div>
         </div>
-        <div class="overview-section mt-6 mb-12">
+        <div 
+            id="overview" 
+            class="overview-section mt-6 mb-12"
+        >
             <header class="mx-6">
                 <h1 class="header-border py-6">
                     Otherworldly, wild, magnificent – this is Western Australia
@@ -73,7 +76,10 @@
                 >
             </figure>
         </div>
-        <div class="articles-section px-6 pb-12">
+        <div    
+            id="destinations" 
+            class="articles-section px-6 pb-12"
+        >
             <header class="uppercase mb-6">
                 <h1 class="header-border mb-2 tracking-widest">
                     Plan your trip
@@ -90,7 +96,10 @@
                 />
             </div>
         </div>
-        <div class="creaseys-videos-section pb-12 px-6">
+        <div
+            id="watch" 
+            class="creaseys-videos-section pb-12 px-6"
+        >
             <div class="flex flex-col gap-y-4">
                 <LandingVideoCard 
                     v-for="(video, index) in creaseysVideos"

@@ -82,7 +82,10 @@ export default {
  
     .scrolled .default-layout .book-now-header {
         flex-basis: 40%;
-        display: block;
+
+        @media screen and (min-width: 1024px) {
+            display: block;
+        }
     }
 
     .scrolled .default-layout .logo {
@@ -127,7 +130,6 @@ export default {
     }
 
     .main-nav {
-        display: flex;
         position: fixed;
         width: 100%;
         top: 80px;
@@ -135,7 +137,7 @@ export default {
         transition: 0.4s;
         transition-timing-function: cubic-bezier(.4,0,.2,1);
         transition-delay: 0s;
-        z-index: -5;
+        z-index: -100;
     }
 
     .logo {
