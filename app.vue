@@ -126,6 +126,7 @@ export default {
     }
 
     .main-nav {
+        display: none;
         position: fixed;
         width: 100%;
         top: 80px;
