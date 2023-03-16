@@ -52,7 +52,7 @@
             class="main-nav justify-center"
             :class="{'bg-white active h-full lg:h-56' : isMainNavShowed}"
         >
-            <HeaderNavigationContents v-if="isMainNavShowed" />
+            <HeaderNavigationContents />
         </nav>
     </header>
 </template>
@@ -109,21 +109,6 @@ export default {
 
     .close-nav {
         filter: invert(80%);
-    }
-
-    .main-nav {
-        &.active {
-            display: flex;
-            opacity: 1;
-            z-index: 5;
-            top: 0;
-            padding-top: $header-height;
-
-            @media screen and (min-width: 1024px) {
-                top: $header-height;
-                padding-top: 0;
-            }
-        }
     }
 
     .western-australia-logo {

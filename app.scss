@@ -1,0 +1,226 @@
+// General
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.page-enter-active,
+.page-leave-active {
+    transition: all 0.1s;
+}
+    
+.page-enter-from,
+.page-leave-to {
+    opacity: 0;
+}
+
+// Header landing and article
+.header-border {
+    font-size: 32px;
+    line-height: 44px;
+    font-weight: 300;
+    
+    &::before {
+        content: "";
+        display: block;
+        width: 48px;
+        height: 3px;
+        margin-bottom: 24px;
+        background: $primary-color;
+    }
+}
+
+.article-layout .header-border {
+    &::before {
+        margin-bottom: 16px;
+        width: 64px;
+    }
+}
+
+.main-header {
+    height: $header-height;
+}
+
+.main-nav {
+    position: fixed;
+    width: 100%;
+    transform: translateY(-100%);
+    top: -1px;
+    transition: 0.4s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0s;
+
+    &.active {
+        transform: translateY(0);
+        display: flex;
+        z-index: 5;
+        top: 0;
+        padding-top: $header-height;
+
+        @media screen and (min-width: 1024px) {
+            top: $header-height;
+            padding-top: 0;
+        }
+    }
+}
+
+.logo {
+    height: 40px;
+}
+
+.travlr-logo {
+    width: 100px;
+}
+
+.western-australia-logo {
+    width: 140px;
+}
+
+.book-now-button {
+    font-size: 15px;
+    color: $secondary-color;
+    border: 1px solid $secondary-color;
+}
+
+// Scrolled
+.scrolled .article-layout .main-container {
+    padding-top: $header-height;
+}
+
+.scrolled .main-header {
+    background-color: white;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+
+    > div {
+        justify-content: space-between;
+    }
+}
+
+.scrolled .default-layout .book-now-header {
+    flex-basis: 40%;
+
+    @media screen and (min-width: 1024px) {
+        display: block;
+    }
+}
+
+.scrolled .default-layout .logo {
+    display: none;
+}
+
+.scrolled .article-layout .main-header {
+    > div {
+        justify-content: flex-start;
+    }
+}
+
+.scrolled .open-nav {
+    filter: invert(1);
+}
+
+// Helperss
+.custom-width {
+    width: 100%;
+}
+
+.footer-border {
+    &::after {
+        content: "";
+        display: block;
+        width: 24px;
+        height: 3px;
+        margin-top: 24px;
+        background: $gray-lighter;
+    }
+}
+
+.small-text {
+    font-size: 10px;
+    letter-spacing: 3px;
+}
+
+.scroll-height-0 {
+    &::-webkit-scrollbar {
+        height: 0;
+    }
+}
+
+.box-orient-vertical {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+
+.line-clamp-1 {
+    -webkit-line-clamp: 1;
+    line-clamp: 1; 
+}
+
+.line-clamp-2 {
+    -webkit-line-clamp: 2;
+    line-clamp: 2; 
+}
+
+.choose-deals-section {
+    background-color: $gray-darkest;
+}
+
+.invert-dark {
+    filter: invert(1);
+}
+
+.max-width-desktop {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.custom-border {
+    box-shadow: 0 1px 3px rgb(0 0 0 / 10%), 0 1px 2px rgb(0 0 0 / 6%);
+}
+
+// Responsive    
+@media screen and (min-width: 640px) {
+    .book-now-header {
+        flex-basis: 25% !important;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .custom-width {
+        width: 980px;
+    }
+
+    .w-article {
+        width: 624px;
+    }
+
+    .travlr-logo, .western-australia-logo {
+        width: auto;
+    }
+
+    .travlr-logo {
+        height: 48px;
+    }
+
+    .western-australia-logo {
+        height: 32px;
+    }
+
+    .book-now-header {
+        flex-basis: 15% !important;
+    }
+
+    .lg-border {
+        border-top: 1px solid $gray-lighter;
+        box-shadow: 0 1px 3px rgb(0 0 0 / 10%), 0 1px 2px rgb(0 0 0 / 6%);
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .custom-width {
+        width: 1200px;
+    }
+}

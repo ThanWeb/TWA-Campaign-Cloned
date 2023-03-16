@@ -1,11 +1,11 @@
 <template>
     <header 
-        class="article-header-layout bg-white w-full"
-        :class="{'h-screen lg:h-auto w-screen inset-0 flex flex-col' : isMainNavShowed}"
+        class="article-header-layout w-full"
+        :class="{'h-screen h-auto inset-0 flex flex-col' : isMainNavShowed}"
     >
         <div 
-            class="main-header w-screen px-4 py-6 lg:py-3 flex items-center lg:justify-center" 
-            :class="isMainNavShowed ? 'showed z-10' : 'custom-border'"
+            class="main-header w-screen flex px-4 py-6 lg:py-3 items-center lg:justify-center" 
+            :class="isMainNavShowed ? 'showed bg-white z-10' : 'custom-border'"
         >
             <div class="custom-width flex gap-x-4 lg:gap-x-6 justify-start items-center">
                 <HeaderButtonsOpenCloseNav 
@@ -39,7 +39,7 @@
             class="main-nav justify-center"
             :class="{'bg-white active h-full lg:h-56' : isMainNavShowed}"
         >
-            <HeaderNavigationContents v-if="isMainNavShowed" />
+            <HeaderNavigationContents />
         </nav>
     </header>
 </template>
@@ -95,19 +95,9 @@ export default {
         .back-to-home {
             display: none;
         }
-    
-        .main-nav {
-            &.active {
-                opacity: 1;
-                z-index: 2;
-                top: 0;
-                padding-top: $header-height;
 
-                @media screen and (min-width: 1024px) {
-                    top: $header-height;
-                    padding-top: 0;
-                }
-            }
+        .main-nav {
+            z-index: 1;
         }
     
         .western-australia-logo {
