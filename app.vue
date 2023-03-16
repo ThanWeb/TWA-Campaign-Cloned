@@ -226,6 +226,10 @@ export default {
             width: 980px;
         }
 
+        .w-article {
+            width: 624px;
+        }
+
         .travlr-logo, .western-australia-logo {
             width: auto;
         }

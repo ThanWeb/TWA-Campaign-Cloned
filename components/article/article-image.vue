@@ -1,5 +1,5 @@
 <template>
-    <div class="my-10 px-4 sm:px-6">
+    <div class="my-4 lg:my-6 px-4 sm:px-6 lg:px-0">
         <img 
             :src="`/images/articles/${image}`" 
             :alt="imageDescription"
