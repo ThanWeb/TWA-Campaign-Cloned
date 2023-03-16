@@ -39,7 +39,7 @@
             class="main-nav justify-center"
             :class="{'bg-white active h-full lg:h-56' : isMainNavShowed}"
         >
-            <HeaderNavigationContents />
+            <HeaderNavigationContents v-if="isMainNavShowed" />
         </nav>
     </header>
 </template>

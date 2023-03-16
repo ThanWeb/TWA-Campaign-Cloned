@@ -1,7 +1,7 @@
 <template>
     <header 
         class="bg-transparent absolute w-full z-20 overflow-hidden"
-        :class="{'h-screen w-screen inset-0 flex flex-col' : isMainNavShowed}"
+        :class="{'h-screen inset-0 flex flex-col' : isMainNavShowed}"
     >
         <div 
             class="main-header w-screen flex px-4 py-6 gap-x-4 items-center lg:justify-center"
@@ -52,7 +52,7 @@
             class="main-nav justify-center"
             :class="{'bg-white active h-full lg:h-56' : isMainNavShowed}"
         >
-            <HeaderNavigationContents />
+            <HeaderNavigationContents v-if="isMainNavShowed" />
         </nav>
     </header>
 </template>
