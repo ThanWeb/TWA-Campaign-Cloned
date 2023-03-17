@@ -39,34 +39,37 @@
             id="overview" 
             class="overview-section mt-6 mb-12"
         >
-            <header class="mx-6">
-                <h1 class="header-border py-6">
-                    Otherworldly, wild, magnificent – this is Western Australia
-                </h1>
-            </header>
-            <article class="mx-6">
-                <p class="mb-6 text-base">
-                    The westernmost part of Australia is a place of unimaginable
-                    beauty, where stark outback plains are interrupted by otherworldly
-                    freshwater lakes, majestic orange cliffs, and undulating ‘beehive’
-                    domes millions of years in the making. A place where a
-                    progressive, exciting city thrives just an hour away from an
-                    off-grid island paradise, home to arguably the most beloved animal
-                    on earth, the quokka. Unspoiled and spectacular, WA’s vast
-                    landscapes may not always feel real, but they are.
-                </p>
-                <p class="mb-6 text-base">
-                    Cityside or outback, adventure in WA always rules. Thrilling
-                    ziplines, decadent food and wine trips, soaring flights over World
-                    Heritage-listed Purnululu National Park, gorge dips under
-                    mesmerising waterfalls, glamping in the wilderness and rambles
-                    through towering caverns and enthralling cave systems are all up
-                    for grabs. The question is: what will you do first?
-                </p>
-                <p class="text-base">
-                    You saw Joel Creasey wander out yonder – now it's your turn.
-                </p>
-            </article>
+            <div class="lg:flex lg:my-20 items-center custom-width mx-auto">
+                <header class="mx-6 lg:w-2/5">
+                    <h1 class="header-border py-6 lg:py-0">
+                        Otherworldly, wild, magnificent – this is Western Australia
+                    </h1>
+                </header>
+                <article class="mx-6 lg:w-3/5">
+                    <p class="mb-6 text-base">
+                        The westernmost part of Australia is a place of unimaginable
+                        beauty, where stark outback plains are interrupted by otherworldly
+                        freshwater lakes, majestic orange cliffs, and undulating ‘beehive’
+                        domes millions of years in the making. A place where a
+                        progressive, exciting city thrives just an hour away from an
+                        off-grid island paradise, home to arguably the most beloved animal
+                        on earth, the quokka. Unspoiled and spectacular, WA’s vast
+                        landscapes may not always feel real, but they are.
+                    </p>
+                    <p class="mb-6 text-base">
+                        Cityside or outback, adventure in WA always rules. Thrilling
+                        ziplines, decadent food and wine trips, soaring flights over World
+                        Heritage-listed Purnululu National Park, gorge dips under
+                        mesmerising waterfalls, glamping in the wilderness and rambles
+                        through towering caverns and enthralling cave systems are all up
+                        for grabs. The question is: what will you do first?
+                    </p>
+                    <p class="text-base">
+                        You saw Joel Creasey wander out yonder – now it's your turn.
+                    </p>
+                </article>
+            </div>
+
             <figure class="flex mt-12 overflow-hidden">
                 <img 
                     v-for="(image, index) in galeryImages"
@@ -78,7 +81,7 @@
         </div>
         <div    
             id="destinations" 
-            class="articles-section px-6 pb-12"
+            class="articles-section px-6 pb-12 custom-width mx-auto"
         >
             <header class="uppercase mb-6">
                 <h1 class="header-border mb-2 tracking-widest">
@@ -88,7 +91,7 @@
                     Go-to guides for your next wander out yonder
                 </p>
             </header>
-            <div class="flex flex-col gap-y-6">
+            <div class="flex flex-col lg:flex-row lg:gap-x-6 gap-y-6">
                 <LandingArticleCard 
                     v-for="(article, index) in articles"
                     v-bind="article"
@@ -98,7 +101,7 @@
         </div>
         <div
             id="watch" 
-            class="creaseys-videos-section pb-12 px-6"
+            class="creaseys-videos-section pb-12 px-6 custom-width mx-auto lg:grid"
         >
             <div class="flex flex-col gap-y-4">
                 <LandingVideoCard 
@@ -113,7 +116,7 @@
             id="choose-your-adventure"
             class="choose-deals-section px-6 py-12"
         >
-            <header class="uppercase text-white mb-6">
+            <header class="uppercase text-white mb-6 custom-width mx-auto">
                 <h1 class="header-border mb-2 tracking-widest">
                     Choose Your Adventure
                 </h1>
@@ -121,7 +124,7 @@
                     Follow in the footsteps of wa's ‘best’ tour guide joel creasey with these unforgettable trips, as seen on network 10
                 </p>
             </header>
-            <div class="flex flex-col gap-y-6">
+            <div class="flex flex-col gap-y-6 custom-width mx-auto lg:flex-row">
                 <LandingDealsCarousel 
                     v-for="(deals, index) in mainDeals"
                     v-bind="deals"
@@ -129,7 +132,7 @@
                 />
             </div>
         </div>
-        <div class="you-may-also-like-section px-6 mt-12"> 
+        <div class="you-may-also-like-section px-6 lg:px-0 mt-12 custom-width mx-auto"> 
             <header class="uppercase">
                 <h1 class="header-border mb-2 tracking-widest">
                     You May Also Like
@@ -153,7 +156,7 @@
                     </tbody>
                 </table>
             </div>
-            <div class="flex flex-col">
+            <div class="flex flex-col lg:flex-row">
                 <LandingCategoryCard 
                     v-for="(item, index) in categoryItem"
                     v-bind="item" 
@@ -161,84 +164,99 @@
                 />
             </div>
         </div>
-        <div class="policies-section mt-8 px-6 pb-12 flex flex-col gap-y-10">
-            <div class="flex items-start gap-x-4">
-                <img 
-                    src="/images/icons/icon-headset.svg" 
-                    alt="Need Help With Your Booking?"
-                    class="ml-1 mt-1"
-                >
-                <div>
-                    <p class="text-base font-semibold mb-1">
-                        Need Help With Your Booking?
-                    </p>
-                    <p class="text-sm">
-                        Contact our friendly customer service team or <span class="font-semibold">read our FAQ</span>
-                    </p>
+        <div class="policies-section mb-2 mt-8 px-6 lg:px-0 custom-width mx-auto">
+            <div class="top-border flex flex-col gap-y-10 py-10 lg:flex-row lg:gap-x-6">
+                <div class="flex items-start gap-x-4 lg:w-1/4 lg:flex-col lg">
+                    <img 
+                        src="/images/icons/icon-headset.svg" 
+                        alt="Need Help With Your Booking?"
+                        class="ml-1 mt-1 lg:ml-0 lg:mt-0 lg:mb-4"
+                    >
+                    <div>
+                        <p class="text-base font-semibold mb-1">
+                            Need Help With Your Booking?
+                        </p>
+                        <p class="text-sm">
+                            Contact our friendly customer service team or 
+                            <a 
+                                class="font-semibold"
+                                href="https://10travlr.zendesk.com/hc/en-us"    
+                                target="_blank"
+                            >read our FAQ</a>
+                        </p>
+                    </div>
                 </div>
-            </div>
-            <div class="flex items-start gap-x-4">
-                <img 
-                    src="/images/icons/icon-calendar.svg" 
-                    alt="Flexible Bookings"
-                    class="ml-1 mt-1"
-                >
-                <div>
-                    <p class="text-base font-semibold mb-1">
-                        Flexible Bookings
-                    </p>
-                    <p class="text-sm">
-                        Plan ahead with peace of mind
-                    </p>
+                <div class="flex items-start gap-x-4 lg:w-1/4 lg:flex-col lg">
+                    <img 
+                        src="/images/icons/icon-calendar.svg" 
+                        alt="Flexible Bookings"
+                        class="ml-1 mt-1 lg:ml-0 lg:mt-0 lg:mb-4"
+                    >
+                    <div>
+                        <p class="text-base font-semibold mb-1">
+                            Flexible Bookings
+                        </p>
+                        <p class="text-sm">
+                            Plan ahead with peace of mind
+                        </p>
+                    </div>
                 </div>
-            </div>
-            <div class="flex items-start gap-x-4">
-                <img
-                    src="/images/icons/icon-covid.svg" 
-                    alt="COVID-19 Refund Guarantee"
-                    class="ml-1 mt-1"
-                >
-                <div>
-                    <p class="text-base font-semibold mb-1">
-                        COVID-19 Refund Guarantee
-                    </p>
-                    <p class="text-sm">
-                        Experiences offer a 100% refund guarantee if your booking needs to be cancelled due to COVID-19
-                    </p>
+                <div class="flex items-start gap-x-4 lg:w-1/4 lg:flex-col lg">
+                    <img
+                        src="/images/icons/icon-covid.svg" 
+                        alt="COVID-19 Refund Guarantee"
+                        class="ml-1 mt-1 lg:ml-0 lg:mt-0 lg:mb-4"
+                    >
+                    <div>
+                        <p class="text-base font-semibold mb-1">
+                            COVID-19 Refund Guarantee
+                        </p>
+                        <p class="text-sm">
+                            Experiences offer a 100% refund guarantee if your booking needs to be cancelled due to COVID-19
+                        </p>
+                    </div>
                 </div>
-            </div>
-            <div class="flex items-start gap-x-4">
-                <img 
-                    src="/images/icons/icon-browse.svg" 
-                    alt="Travel Now, Pay Later"
-                    class="ml-1 mt-1"
-                >
-                <div>
-                    <p class="text-base font-semibold mb-1">
-                        Travel Now, Pay Later
-                    </p>
-                    <p class="text-sm">
-                        Pay for your trip in fortnightly or monthly installments, interest free. <span class="font-semibold">More here</span>
-                    </p>
+                <div class="flex items-start gap-x-4 lg:w-1/4 lg:flex-col lg">
+                    <img 
+                        src="/images/icons/icon-browse.svg" 
+                        alt="Travel Now, Pay Later"
+                        class="ml-1 mt-1 lg:ml-0 lg:mt-0 lg:mb-4"
+                    >
+                    <div>
+                        <p class="text-base font-semibold mb-1">
+                            Travel Now, Pay Later
+                        </p>
+                        <p class="text-sm">
+                            Pay for your trip in fortnightly or monthly installments, interest free.<br>
+                            <a 
+                                class="font-semibold"
+                                href="https://www.10travlr.com.au/humm"    
+                                target="_blank"
+                            >More here</a>
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="form-section">
-            <div class="h-60">
+        <div class="form-section lg:flex">
+            <div class="h-60 lg:h-full lg:w-2/4">
                 <img 
                     src="/images/newsletter/quokka.png" 
                     alt="Cute Quokka"
                     class="h-full w-full object-cover"
                 >
             </div>
-            <div class="pt-6 pb-12 px-4">
-                <h1 class="uppercase text-2xl leading-6 mb-4 tracking-widest">
-                    WIN 1 of 10 $100 travel vouchers!
+            <div class="pb-12 p-6 lg:w-2/4 lg:px-20 lg:py-16 lg:flex flex-col xl:py-20 xl:px-32 2xl:max-w-3xl">
+                <h1 class="uppercase text-2xl lg:text-3xl leading-6 lg:leading-8 mb-4 tracking-widest text-gray-darkest">
+                    <span class="font-semibold">SIGN UP</span> TO OUR NEWSLETTER
                 </h1>
-                <p class="mb-6 text-base font-normal">
-                    Your chance to put an extra $100 towards your next getaway, stay or activity. Sign up with us to make it happen.
+                <p class="mb-6 text-base font-normal text-gray-darker">
+                    While our <a class="font-semibold underline text-black">travel voucher competition</a> has now ended, you can still sign up to receive one of a kind itineraries, exclusive deals, awe-inspiring experiences and travel tips delivered straight to your inbox.
                 </p>
-                <form action="">
+                <form 
+                    action="" 
+                    class="text-gray-darker lg:mt-auto"
+                >
                     <div class="flex flex-col mb-3">
                         <label 
                             for="name"
@@ -248,10 +266,17 @@
                         </label>
                         <input 
                             id="name" 
-                            type="text" 
+                            v-model="nameInput"
+                            type="text"
                             placeholder="Enter your name"
                             class="h-14 p-4 text-base rounded-lg input-form"
                         >
+                        <span 
+                            v-if="nameInput.length <= 0"
+                            class="text-sm text-red-600 mt-2"
+                        >
+                            This field is required.
+                        </span>
                     </div>
                     <div class="flex flex-col mb-6">
                         <label 
@@ -262,39 +287,25 @@
                         </label>
                         <input 
                             id="email" 
+                            v-model="emailInput"
                             type="email" 
                             placeholder="Enter your email address"
                             class="h-14 p-4 text-base rounded-lg input-form"
                         >
-                    </div>
-                    <div class="mb-6 flex items-center">
-                        <input 
-                            id="terms-and-conditions"
-                            type="checkbox" 
-                            name="terms-and-conditions" 
-                            class="w-5 mr-1"
+                        <span 
+                            v-if="emailInput.length <= 0 || !checkEmailIsValid()"
+                            class="text-sm text-red-600 mt-2"
                         >
-                        <label 
-                            class="text-sm"
-                            for="terms-and-conditions"
-                        >
-                            I’ve read and agree to the 
-                            <a 
-                                href="#" 
-                                target="_blank"
-                                class="underline font-bold"
-                            >
-                                terms & conditions
-                            </a>
-                        </label>
+                            {{ emailInput.length <= 0 ? 'This field is required' : 'Please enter a valid email address.' }}
+                        </span>
                     </div>
                     <div class="flex">
                         <button 
                             type="button"
-                            class="h-12 w-full text-base text-white submit-form rounded-lg"
-                            disabled
+                            class="h-12 w-full text-base text-white submit-form rounded-lg font-semibold tracking-widest"
+                            :disabled="checkEmailIsValid() && nameInput.length > 0 ? false : true"
                         >
-                            ENTER NOW
+                            SIGN UP
                         </button>
                     </div>
                 </form>
@@ -311,7 +322,9 @@ interface Data {
     creaseysVideos: Array<CreaseysVideos>,
     mainDeals: Array<MainDeals>,
     secondaryDeals: Array<SecondaryDeals>,
-    categoryItem: Array<CategoryItem>
+    categoryItem: Array<CategoryItem>,
+    nameInput: string,
+    emailInput: string
 }
 
 interface Articles {
@@ -544,7 +557,9 @@ export default {
                     description: 'Flights to suit your calendar',
                     image: 'category-03.png'
                 }
-            ]
+            ],
+            nameInput: '',
+            emailInput: ''
         }
     },
     mounted() {
@@ -556,6 +571,10 @@ export default {
             // this.videoBackgroundHeight = `${videoBgHeight}`
             const vh = window.innerHeight * 0.01
             document?.documentElement.style.setProperty('--vh', `${vh}px`)
+        },
+        checkEmailIsValid () {
+            const regexExp = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/gi
+            return regexExp.test(this.emailInput)
         }
     }
 }
@@ -567,14 +586,8 @@ export default {
         height: calc(var(--vh, 1vh) * 100);
     }
 
-    .policies-section {
-        &:before {
-            content: "";
-            display: block;
-            width: 100%;
-            height: 1px;
-            background: #E5E7EB;
-        }
+    .policies-section .top-border{
+        border-top: 1px solid #E5E7EB;
     }
 
     .form-section {
@@ -585,7 +598,15 @@ export default {
         }
 
         .submit-form {
-            background-color: $gray-lighter;
+            background-color: $primary-color;
+
+            &[disabled] {
+                background-color: $gray-lighter;
+            }
+        }
+
+        @media screen and (min-width: 1024px) {
+            height: 656px;
         }
     }
 </style>
