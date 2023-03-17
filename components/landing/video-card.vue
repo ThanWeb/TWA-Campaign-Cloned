@@ -1,7 +1,7 @@
 <template>
     <div 
         class="video-card h-60 rounded-lg overflow-hidden"
-        :class="{'main-video': index === 0 }"
+        :class="index === 0 ? 'main-video' : `secondary-video video-${index}`"
     >
         <div 
             :style="`background-image: url('/images/thumbnails/${thumbnail}')`"
@@ -100,10 +100,31 @@ export default {
 <style lang="scss" scoped>
     .main-video {
         height: 440px;
+        grid-column-start: 1;
+        grid-column-end: 10;
 
         &-heading {
             font-size: 32px;
             line-height: 32px;
+        }
+    }
+
+    .secondary-video {
+        grid-row-start: 2;
+
+        &.video-1 {
+            grid-column-start: 1;
+            grid-column-end: 4;
+        }
+
+        &.video-2 {
+            grid-column-start: 4;
+            grid-column-end: 7;
+        }
+
+        &.video-3 {
+            grid-column-start: 7;
+            grid-column-end: 10;
         }
     }
 

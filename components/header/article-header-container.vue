@@ -1,7 +1,7 @@
 <template>
     <header 
         class="article-header-layout w-full"
-        :class="{'h-screen h-auto inset-0 flex flex-col' : isMainNavShowed}"
+        :class="{'h-auto inset-0 flex flex-col' : isMainNavShowed}"
     >
         <div 
             class="main-header w-screen flex px-4 py-6 lg:py-3 items-center lg:justify-center" 

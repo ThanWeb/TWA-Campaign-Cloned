@@ -103,7 +103,7 @@
             id="watch" 
             class="creaseys-videos-section pb-12 px-6 custom-width mx-auto lg:grid"
         >
-            <div class="flex flex-col gap-y-4">
+            <div class="flex flex-col gap-y-4 lg:gap-6 lg:grid lg:grid-cols-9">
                 <LandingVideoCard 
                     v-for="(video, index) in creaseysVideos"
                     v-bind="video"
