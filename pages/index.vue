@@ -156,7 +156,7 @@
                     </tbody>
                 </table>
             </div>
-            <div class="flex flex-col lg:flex-row">
+            <div class="flex flex-col lg:flex-row lg:mt-14 lg:gap-x-6 text-gray-med">
                 <LandingCategoryCard 
                     v-for="(item, index) in categoryItem"
                     v-bind="item" 
@@ -363,7 +363,8 @@ interface SecondaryDeals {
 interface CategoryItem {
     heading: string,
     description: string,
-    image: string
+    image: string,
+    url: string
 }
 
 export default {
@@ -545,17 +546,20 @@ export default {
                 {
                     heading: 'Explore Activities',
                     description: 'Unique things to do for every kind of holiday',
-                    image: 'category-01.png'
+                    image: 'category-01.png',
+                    url: 'https://10travlr.com.au/activities'
                 },
                 {
                     heading: 'Find Places to Stay',
                     description: 'Cosy retreats and city breaks for every budget',
-                    image: 'category-02.png'
+                    image: 'category-02.png',
+                    url: 'https://10travlr.com.au/accommodation'
                 },
                 {
                     heading: 'Search Flights',
                     description: 'Flights to suit your calendar',
-                    image: 'category-03.png'
+                    image: 'category-03.png',
+                    url: 'https://10travlr.com.au/flights'
                 }
             ],
             nameInput: '',
