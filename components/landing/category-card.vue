@@ -1,22 +1,22 @@
 <template>
     <div class="category-card">
-        <div class="overflow-hidden mb-3 rounded-lg zoom-image">
-            <img 
-                :src="`/images/categories/${image}`" 
-                :alt="heading"
-            >
-        </div>
-        <h3 class="text-xl font-semibold mb-1 text-gray-darkest">
-            <NuxtLink
-                :to="`${url}`"
-                target="_blank"
-            >
+        <NuxtLink
+            :to="`${url}`"
+            target="_blank"
+        >
+            <div class="overflow-hidden mb-3 rounded-lg zoom-image">
+                <img 
+                    :src="`/images/categories/${image}`" 
+                    :alt="heading"
+                >
+            </div>
+            <h3 class="text-xl font-semibold mb-1 text-gray-darkest">
                 {{ heading }}
-            </NuxtLink>
-        </h3>
-        <p class="text-base category-desc mb-4">
-            {{ description }}
-        </p>
+            </h3>
+            <p class="text-base category-desc mb-4">
+                {{ description }}
+            </p>
+        </NuxtLink>
     </div>
 </template>
 
