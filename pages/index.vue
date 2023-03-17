@@ -164,8 +164,8 @@
                 />
             </div>
         </div>
-        <div class="policies-section mb-2 mt-8 px-6 lg:px-0 custom-width mx-auto">
-            <div class="top-border flex flex-col gap-y-10 py-10 lg:flex-row lg:gap-x-6">
+        <div class="policies-section px-6 lg:px-0 custom-width mx-auto text-gray-darker">
+            <div class="top-border flex flex-col mt-8 mb-12 gap-y-10 pt-10 lg:flex-row lg:gap-x-6 lg:my-16">
                 <div class="flex items-start gap-x-4 lg:w-1/4 lg:flex-col lg">
                     <img 
                         src="/images/icons/icon-headset.svg" 
@@ -173,7 +173,7 @@
                         class="ml-1 mt-1 lg:ml-0 lg:mt-0 lg:mb-4"
                     >
                     <div>
-                        <p class="text-base font-semibold mb-1">
+                        <p class="text-base font-semibold mb-1 text-gray-darkest">
                             Need Help With Your Booking?
                         </p>
                         <p class="text-sm">
@@ -193,7 +193,7 @@
                         class="ml-1 mt-1 lg:ml-0 lg:mt-0 lg:mb-4"
                     >
                     <div>
-                        <p class="text-base font-semibold mb-1">
+                        <p class="text-base font-semibold mb-1 text-gray-darkest">
                             Flexible Bookings
                         </p>
                         <p class="text-sm">
@@ -208,7 +208,7 @@
                         class="ml-1 mt-1 lg:ml-0 lg:mt-0 lg:mb-4"
                     >
                     <div>
-                        <p class="text-base font-semibold mb-1">
+                        <p class="text-base font-semibold mb-1 text-gray-darkest">
                             COVID-19 Refund Guarantee
                         </p>
                         <p class="text-sm">
@@ -223,7 +223,7 @@
                         class="ml-1 mt-1 lg:ml-0 lg:mt-0 lg:mb-4"
                     >
                     <div>
-                        <p class="text-base font-semibold mb-1">
+                        <p class="text-base font-semibold mb-1 text-gray-darkest">
                             Travel Now, Pay Later
                         </p>
                         <p class="text-sm">
