@@ -132,8 +132,8 @@
                 />
             </div>
         </div>
-        <div class="you-may-also-like-section px-6 lg:px-0 mt-12 custom-width mx-auto"> 
-            <header class="uppercase">
+        <div class="you-may-also-like-section px-6 lg:px-0 mt-12"> 
+            <header class="uppercase text-gray-darkest custom-width mx-auto">
                 <h1 class="header-border mb-2 tracking-widest">
                     You May Also Like
                 </h1>
@@ -141,22 +141,36 @@
                     spectacular WA trips Joel didn’t get to take (but you can)
                 </p>
             </header>
-            <div class="py-6 overflow-auto scroll-height-0">
-                <table class="min-w-full">
-                    <tbody>
-                        <tr class="flex items-start gap-x-4">
-                            <td
-                                v-for="(deals, index) in secondaryDeals"
-                                :key="index"
-                                class="w-72"
-                            >
-                                <LandingDealsCard v-bind="deals" />
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div class="lg:flex lg:gap-x-4 lg:justify-center lg:px-2 lg:items-center">
+                <button 
+                    type="button"
+                    class="hidden xl:flex w-12 h-12 swipe-button items-center justify-center rounded-full cursor-pointer"
+                >
+                    <img 
+                        src="/images/icons/icon-left.svg" 
+                        alt="Swipe left"
+                        class="swipe-deals"
+                    >
+                </button>
+                <div class="py-6 scroll-height-0 text-gray-darker custom-width mx-auto lg:flex">
+                    <LandingDealsCard
+                        v-for="(deals, index) in secondaryDeals"
+                        :key="index"
+                        v-bind="deals" 
+                    />
+                </div>
+                <button 
+                    type="button"
+                    class="hidden xl:flex w-12 h-12 swipe-button items-center justify-center rounded-full cursor-pointer"
+                >
+                    <img 
+                        src="/images/icons/icon-right.svg" 
+                        alt="Swipe right"
+                        class="swipe-deals"
+                    >
+                </button>
             </div>
-            <div class="flex flex-col lg:flex-row lg:mt-14 lg:gap-x-6 text-gray-med">
+            <div class="flex flex-col lg:flex-row lg:mt-14 lg:gap-x-6 text-gray-med custom-width mx-auto">
                 <LandingCategoryCard 
                     v-for="(item, index) in categoryItem"
                     v-bind="item" 
@@ -594,6 +608,25 @@ export default {
     .height-viewport {
         height: 100vh; /* Fallback for browsers that do not support Custom Properties */
         height: calc(var(--vh, 1vh) * 100);
+    }
+
+    .you-may-also-like-section {
+        .swipe-button {
+            border: 1px solid $gray-lighter;
+
+            &:hover {
+                border-color: $primary-color;
+                background-color: $primary-color;
+
+                .swipe-deals {
+                    filter: none;
+                }
+            }
+        }
+
+        .swipe-deals {
+            filter: invert(.9);
+        }
     }
 
     .policies-section .top-border{
