@@ -121,7 +121,7 @@
     filter: invert(1);
 }
 
-// Helperss
+// Helpers
 .custom-width {
     width: 100%;
 }
@@ -179,6 +179,18 @@
 
 .custom-border {
     box-shadow: 0 1px 3px rgb(0 0 0 / 10%), 0 1px 2px rgb(0 0 0 / 6%);
+}
+
+.hover-zoom-image {
+    img {
+        transition: transform .5s;
+    }
+
+    &:hover {
+        img {
+            transform: scale(1.05);
+        }
+    }
 }
 
 // Responsive    
