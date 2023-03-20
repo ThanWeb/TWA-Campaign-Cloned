@@ -37,7 +37,7 @@
         </div>
         <div 
             id="overview" 
-            class="overview-section mt-6 mb-12"
+            class="overview-section mt-6 mb-12 text-gray-darkest"
         >
             <div class="lg:flex lg:my-20 items-center custom-width mx-auto">
                 <header class="mx-6 lg:w-2/5">
@@ -81,7 +81,7 @@
         </div>
         <div    
             id="destinations" 
-            class="articles-section px-6 pb-12 custom-width mx-auto"
+            class="articles-section px-6 pb-12 custom-width mx-auto text-gray-darkest"
         >
             <header class="uppercase mb-6">
                 <h1 class="header-border mb-2 tracking-widest">
@@ -91,7 +91,7 @@
                     Go-to guides for your next wander out yonder
                 </p>
             </header>
-            <div class="flex flex-col lg:flex-row lg:gap-x-6 gap-y-6">
+            <div class="flex flex-col lg:flex-row lg:gap-x-6 gap-y-6 text-gray-darkest">
                 <LandingArticleCard 
                     v-for="(article, index) in articles"
                     v-bind="article"
@@ -357,7 +357,8 @@ interface SecondaryDeals {
     heading: string,
     description: string,
     image: string,
-    price: string
+    price: string,
+    articleLink: string
 }
 
 interface CategoryItem {
@@ -409,7 +410,7 @@ export default {
                 {
                     heading: 'JOEL CREASEY’S LONG WEEKEND ADVENTURE',
                     description: 'Watch his wander out yonder in Perth',
-                    thumbnail: 'thumbnail-3.png',
+                    thumbnail: 'thumbnail-3.jpeg',
                     videoURL: 'https://www.youtube.com/embed/cHaKdzbjl9Y'
                 },
                 {
@@ -511,35 +512,40 @@ export default {
                     heading: 'Glamping Getaway: Perth and Rottnest Island Adventure',
                     description: '6-Day Perth City Break with Rottnest Island Glamping',
                     image: 'second-deal-image-01.png',
-                    price: '849'
+                    price: '849',
+                    articleLink: 'https://www.10travlr.com.au/deals-and-offers/details/holiday-to-perth-with-glamping-on-rottnest-island-1041'
                 },
                 {
                     location: 'Perth to Exmouth',
                     heading: 'Journey Along Australia’s Coral Coast',
                     description: '10-Day Perth to Exmouth Return Adventure',
                     image: 'second-deal-image-02.png',
-                    price: '2,299'
+                    price: '2,299',
+                    articleLink: 'https://www.10travlr.com.au/deals-and-offers/details/the-journey-to-australias-north-west-1039'
                 },
                 {
                     location: 'Southern WA',
                     heading: 'Highlights of the South West',
                     description: '5-Day Margaret River and Albany Adventure',
                     image: 'second-deal-image-03.png',
-                    price: '1,895'
+                    price: '1,895',
+                    articleLink: 'https://www.10travlr.com.au/deals-and-offers/details/experience-the-highlights-of-southern-wa-1049'
                 },
                 {
                     location: 'Ningaloo Reef',
                     heading: 'WA Highlights: A Reef to Outback Adventure',
                     description: '8-Day Ningaloo Reef and Karijini Adventure',
                     image: 'second-deal-image-04.png',
-                    price: '4,055'
+                    price: '4,055',
+                    articleLink: 'https://www.10travlr.com.au/deals-and-offers/details/explore-western-australias-best-bits-1048'
                 },
                 {
                     location: 'The Kimberley',
                     heading: 'Kimberley Wilderness Adventure',
                     description: '9-Day Premium Kimberley and the Bungle Bungle Range',
                     image: 'second-deal-image-05.png',
-                    price: '10,285'
+                    price: '10,285',
+                    articleLink: 'https://www.10travlr.com.au/deals-and-offers/details/kimberley-wilderness-adventure-1043'
                 }
             ],
             categoryItem: [

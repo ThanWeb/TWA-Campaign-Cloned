@@ -1,10 +1,10 @@
 <template>
-    <div class="category-card">
+    <div class="category-card hover-zoom-image cursor-pointer">
         <NuxtLink
             :to="`${url}`"
             target="_blank"
         >
-            <div class="overflow-hidden mb-3 rounded-lg zoom-image">
+            <div class="overflow-hidden mb-3 rounded-lg">
                 <img 
                     :src="`/images/categories/${image}`" 
                     :alt="heading"
@@ -45,17 +45,7 @@ export default {
 
 <style lang="scss" scoped>
     .category-card {
-        cursor: pointer;
-
-        img {
-            transition: transform .5s;
-        }
-
         &:hover {
-            img {
-                transform: scale(1.05);
-            }
-
             h3 {
                 text-decoration: underline;
             }
