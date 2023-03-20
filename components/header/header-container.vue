@@ -14,22 +14,34 @@
                 />
                 <ul class="nav-desktop uppercase gap-x-10 text-sm tracking-widest font-semibold">
                     <li>
-                        <a href="#overview">
+                        <a 
+                            href="#overview"
+                            class="hover:underline"
+                        >
                             overview
                         </a>
                     </li>
                     <li>
-                        <a href="#destinations">
+                        <a 
+                            href="#destinations"
+                            class="hover:underline"
+                        >
                             destinations
                         </a>
                     </li>
                     <li>
-                        <a href="#watch">
+                        <a 
+                            href="#watch"
+                            class="hover:underline"
+                        >
                             watch
                         </a>
                     </li>
                     <li>
-                        <a href="#choose-your-adventure">
+                        <a 
+                            href="#choose-your-adventure"
+                            class="hover:underline"
+                        >
                             experience
                         </a>
                     </li>
