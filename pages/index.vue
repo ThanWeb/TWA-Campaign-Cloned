@@ -399,25 +399,25 @@ export default {
                     heading: 'JOEL CREASEY’S EAST KIMBERLEY ADVENTURE',
                     description: 'Watch the comedian explore The Bungle Bungle Range, Kununurra/Goonoonoorrang, and more',
                     thumbnail: 'thumbnail-1.jpeg',
-                    videoURL: 'https://www.youtube.com/embed/uWrf2vt-7P8'
+                    videoURL: 'https://www.youtube-nocookie.com/embed/uWrf2vt-7P8'
                 },
                 {
                     heading: 'JOEL CREASEY’S KUNUNURRA ADVENTURE',
                     description: 'Watch Joel take on El Questro and Lake Argyle',
                     thumbnail: 'thumbnail-2.jpeg',
-                    videoURL: 'https://www.youtube.com/embed/f0UCRFQJO9s'
+                    videoURL: 'https://www.youtube-nocookie.com/embed/f0UCRFQJO9s'
                 },
                 {
                     heading: 'JOEL CREASEY’S LONG WEEKEND ADVENTURE',
                     description: 'Watch his wander out yonder in Perth',
                     thumbnail: 'thumbnail-3.jpeg',
-                    videoURL: 'https://www.youtube.com/embed/cHaKdzbjl9Y'
+                    videoURL: 'https://www.youtube-nocookie.com/embed/cHaKdzbjl9Y'
                 },
                 {
                     heading: 'JOEL CREASEY’S FOODIE ADVENTURE',
                     description: 'Watch the comedian wander out yonder in Perth and the Swan Valley',
                     thumbnail: 'thumbnail-4.jpeg',
-                    videoURL: 'https://www.youtube.com/embed/F50pooP7_fA'
+                    videoURL: 'https://www.youtube-nocookie.com/embed/F50pooP7_fA'
                 }
             ],
             mainDeals: [

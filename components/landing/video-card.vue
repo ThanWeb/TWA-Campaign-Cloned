@@ -1,21 +1,22 @@
 <template>
     <div 
-        class="video-card h-60 rounded-lg overflow-hidden cursor-pointer"
+        class="video-card h-80 lg:h-64 rounded-lg overflow-hidden cursor-pointer"
         :class="index === 0 ? 'main-video' : `secondary-video video-${index}`"
     >
         <div 
-            :style="`background-image: url('/images/thumbnails/${thumbnail}')`"
-            class="h-full video-background bg-cover bg-center md:bg-top lg:bg-center flex flex-col justify-center items-center text-white text-center"
+            :style="`background-image:url('/images/thumbnails/${thumbnail}');`"
+            class="h-full video-background bg-cover bg-center md:bg-top lg:bg-center flex flex-col justify-center items-center text-white text-center md:px-8 lg:px-4"
             @click="toggleModal"
         >
             <h3 
-                :class="index === 0 ? 'main-video-heading font-light tracking-widest mb-2 px-4' : 'text-xl font-semibold mb-1 px-10'"
+                class="font-normal tracking-widest"
+                :class="index === 0 ? 'main-video-heading font-light mb-2 px-4 lg:px-32' : 'text-xl mb-1 px-10 lg:px-0'"
             >
                 {{ heading }}
             </h3>
             <p 
-                class="px-10 text-base"
-                :class="index === 0 ? 'mb-6' : 'mb-4'"
+                class="px-10 md:px-16 lg:px-6 text-sm"
+                :class="index === 0 ? 'mb-6 uppercase tracking-widest lg:px-32' : 'mb-4'"
             >
                 {{ description }}
             </p>
@@ -32,12 +33,11 @@
         </div>
         <div 
             v-if="isModalShowed"
-            class="fixed z-50 inset-0 bg-black/[.8] py-6 px-11 flex flex-col"
+            class="fixed z-50 inset-0 bg-black/[.8] py-6 flex flex-col"
             @click="toggleModal"
         >
             <button 
-                class="flex items-center justify-end"
-                style="margin: 0 -20px;"
+                class="flex items-center justify-end mx-6"
                 type="button"
             >
                 <img 
@@ -46,15 +46,14 @@
                 >
             </button>
             <div 
-                class="relative h-0 my-auto" 
-                style="padding-bottom: 56.25%;"
+                class="h-full w-full flex justify-center"
             >
                 <iframe 
-                    :src="`${videoURL}?&autoplay=1`" 
+                    allowfullscreen="true"
                     allow="autoplay, fullscreen"
-                    frameborder="0"
-                    class="absolute top-0 left-0 w-full h-full lg:h-2/4"
-                    allowfullscreen
+                    :src="`${videoURL}?autoplay=1&autohide=1&fs=1&rel=0&hd=1&wmode=transparent&enablejsapi=1&html5=1`"
+                    scrolling="no"
+                    class="my-auto mx-6 md:mx-12 lg:mx-0 w-full lg:w-7/12 aspect-video"
                 />
             </div>
         </div>
@@ -113,13 +112,13 @@ export default {
         &:hover {
             @media screen and (min-width: 1024px) {
                 .video-background {
-                    background-size: 160%;
+                    background-size: 155%;
                 }
             }
-    
+
             @media screen and (min-width: 1280px) {
                 .video-background {
-                    background-size: 110%;
+                    background-size: 115%;
                 }
             }
 
@@ -141,7 +140,7 @@ export default {
 
         @media screen and (min-width: 1280px) {
             .video-background {
-                background-size: 100%;
+                background-size: 110%;
             }
         }
     }
@@ -153,6 +152,19 @@ export default {
         &-heading {
             font-size: 32px;
             line-height: 32px;
+        }
+
+        @media screen and (min-width: 768px) {
+            &-heading {
+                font-size: 40px;
+                line-height: 40px;
+            }
+        }
+
+        @media screen and (min-width: 1024px) {
+            & {
+                height: 480px;
+            }
         }
     }
 
