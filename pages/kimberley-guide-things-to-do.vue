@@ -17,7 +17,7 @@
                     Picture this: you’re flying over flat, arid plains when a rocky formation abruptly rears upwards, morphing into an otherworldly landscape. You see hundreds of domes in rusted orange, with prehistoric palms sprouting from impossible crevices. Or imagine you’re floating below a misting waterfall at the end of a boulder-strewn gorge, or absorbing the rhythm of the didgeridoo as the sun’s last rays slip below this ancient land. If you see yourself in any of these scenes, it’s already too late – you’ve succumbed to the powerful pull of the East Kimberley, and there’s nothing else for it but to
                     <a 
                         href="/" 
-                        class="text-primary font-semibold"
+                        class="text-primary font-semibold hover:underline"
                     >book your trip</a>.
                 </p>
                 <p :class="paragraphClasses">
@@ -30,7 +30,7 @@
                     Wondering how to get to the Kimberley? Unless you have time for a monumental road trip, begin your East Kimberley adventure by flying to Kununurra via Perth, Broome or Darwin. The gateway town is home to about 7000 residents, but in the peak dry season (April to October) Kununurra pulses with caravanning grey nomads and adventurous travellers getting their dose of real outback. Untouched and wild, this isn’t the kind of place to arrive and wing it: it’s
                     <a 
                         href="https://www.10travlr.com.au/deals-and-offers/details/kununurra-marvels-5-day-outback-adventure-1082" 
-                        class="text-primary font-semibold"
+                        class="text-primary font-semibold hover:underline"
                         target="_blank"
                     >
                         best to pre-book
@@ -38,7 +38,7 @@
                     car hire, guided tours and your 
                     <a 
                         href="https://www.10travlr.com.au/deals-and-offers/details/kununurra-marvels-5-day-outback-adventure-1082" 
-                        class="text-primary font-semibold"
+                        class="text-primary font-semibold hover:underline"
                         target="_blank"
                     >
                         Kununurra
@@ -62,7 +62,7 @@
                     Aboriginal culture runs deep across the Kimberley. To get a deeper understanding of the region, meeting with some of the traditional custodians of this land is a great starting point. A visit to the Indigenous-owned Waringarri Aboriginal Arts Centre feels like a must. Here, dreamtime stories inspire modern paintings, sculptures, and even boab engravings. For deeper insights still, join the 
                     <a 
                         href="https://www.10travlr.com.au/deals-and-offers/details/the-ultimate-east-kimberley-experience-1094" 
-                        class="text-primary font-semibold"
+                        class="text-primary font-semibold hover:underline"
                         target="_blank"
                     >
                         guided cultural sunset arts tour 
@@ -79,7 +79,7 @@
                     Experience this guided tour for yourself – book our
                     <a 
                         href="https://www.10travlr.com.au/deals-and-offers/details/the-ultimate-east-kimberley-experience-1094" 
-                        class="text-primary font-semibold"
+                        class="text-primary font-semibold hover:underline"
                         target="_blank"
                     >East Kimberley 6-day adventure package here</a>.
                 </p>
@@ -103,7 +103,7 @@
                     Book your 6-day 
                     <a 
                         href="https://www.10travlr.com.au/deals-and-offers/details/the-ultimate-east-kimberley-experience-1094" 
-                        class="text-primary font-semibold"
+                        class="text-primary font-semibold hover:underline"
                         target="_blank"
                     >
                         East Kimberley adventure package
@@ -111,7 +111,7 @@
                     or the 5-day 
                     <a 
                         href="https://www.10travlr.com.au/deals-and-offers/details/kununurra-marvels-5-day-outback-adventure-1082" 
-                        class="text-primary font-semibold"
+                        class="text-primary font-semibold hover:underline"
                         target="_blank"
                     >
                         Kununurra Marvels adventure 
@@ -144,7 +144,7 @@
                     Explore Purnululu National Park with our 6-day 
                     <a 
                         href="https://www.10travlr.com.au/deals-and-offers/details/the-ultimate-east-kimberley-experience-1094" 
-                        class="text-primary font-semibold"
+                        class="text-primary font-semibold hover:underline"
                         target="_blank"
                     >
                         East Kimberley adventure package</a>, which includes a scenic flight over the Bungle Bungle Range, glamping and visits to Echidna Chasm and Cathedral Gorge.
@@ -175,7 +175,7 @@
                     Explore El Questro and have a dip in Emma Gorge and Zebedee Springs by booking the 6-day
                     <a 
                         href="https://www.10travlr.com.au/deals-and-offers/details/the-ultimate-east-kimberley-experience-1094" 
-                        class="text-primary font-semibold"
+                        class="text-primary font-semibold hover:underline"
                         target="_blank"
                     >
                         East Kimberley adventure package
@@ -183,7 +183,7 @@
                     or the 5-day 
                     <a 
                         href="https://www.10travlr.com.au/deals-and-offers/details/kununurra-marvels-5-day-outback-adventure-1082" 
-                        class="text-primary font-semibold"
+                        class="text-primary font-semibold hover:underline"
                         target="_blank"
                     >Kununurra Marvels outback package</a>.
                 </p>
@@ -210,7 +210,7 @@
                     Book your 
                     <a 
                         href="/#choose-your-adventure" 
-                        class="text-primary font-semibold"
+                        class="text-primary font-semibold hover:underline"
                     >
                         East Kimberley adventure now</a>.
                 </p>

@@ -1,7 +1,7 @@
 <template>
     <NuxtLink 
         to="/"                     
-        class="hidden lg:flex mt-12 items-center"
+        class="hidden lg:flex mt-12 items-center back-to-home-hover"
     >
         <img 
             class="back-to-home"
@@ -15,5 +15,13 @@
 <style lang="scss">
     .back-to-home {
         filter: invert(.5);
+
+        &-hover {
+            &:hover {
+                span {
+                    text-decoration: underline;
+                }
+            }
+        }
     }
 </style>

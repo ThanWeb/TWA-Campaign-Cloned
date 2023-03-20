@@ -20,7 +20,7 @@
                     Perth is ‘livable’, yes, but it’s also alive. Exciting and uncomplicated and full of good times. As a long-time beneficiary of Perth’s good life; I’m here, only slightly smug, to share more of what makes this city one of the greats, and to help you make those sunny days count on your next visit. Let your 
                     <a 
                         href="https://www.10travlr.com.au/deals-and-offers/details/the-perfect-long-weekend-adventure-in-perth-1097" 
-                        class="text-primary font-semibold"
+                        class="text-primary font-semibold hover:underline"
                         target="_blank"
                     >
                         Perth adventure 
@@ -39,7 +39,7 @@
                     There's no time to twiddle your thumbs when visiting Perth. High on your list should be a city tour where you’ll hear the capital’s history and culture firsthand from a passionate local guide that knows it well. There’s a bunch of great Perth city tours to choose from including 
                     <a 
                         href="https://www.ohheywa.com.au/" 
-                        class="text-primary font-semibold"
+                        class="text-primary font-semibold hover:underline"
                         target="_blank"
                     >
                         Oh Hey WA 
@@ -47,7 +47,7 @@
                     – a ride aboard the Perth Explorer's double-decker bus, a zip through Kings Park on a Segway, or even a trundle through Elizabeth Quay and beyond
                     <a 
                         href="https://www.10travlr.com.au/deals-and-offers/details/the-perfect-long-weekend-adventure-in-perth-1097" 
-                        class="text-primary font-semibold"
+                        class="text-primary font-semibold hover:underline"
                         target="_blank"
                     >
                         on a rickshaw
@@ -67,7 +67,7 @@
                     Psych yourself up for Perth's only bridge climb and zipline. 
                     <a 
                         href="https://www.10travlr.com.au/deals-and-offers/details/the-perfect-long-weekend-adventure-in-perth-1097" 
-                        class="text-primary font-semibold"
+                        class="text-primary font-semibold hover:underline"
                         target="_blank"
                     >
                         The Matagarup Zip+Climb
@@ -85,7 +85,7 @@
                     Perth is blessed with two idyllic islands, Rottnest Island and Penguin Island. Wadjemup, aka Rottnest Island or ‘Rotto’ to Perthites, glistens in the Indian Ocean. Just 19 kilometres off Fremantle’s coastline, Perth’s island playground feels like it's a million miles away – and has the unique native wildlife and aquamarine bays to match. I recommend a full day exploring here, even an 
                     <a 
                         href="https://www.10travlr.com.au/deals-and-offers/details/glamping-getaway-6-day-perth-and-rottnest-island-adventure-1041" 
-                        class="text-primary font-semibold"
+                        class="text-primary font-semibold hover:underline"
                         target="_blank"
                     >
                         overnight glamping stay 
@@ -99,7 +99,7 @@
                     The five-minute ferry ride over to Penguin Island from Shoalwater is operated by Perth Wildlife Encounters, the same group who offer the incredible 
                     <a 
                         href="https://www.10travlr.com.au/deals-and-offers/details/the-perfect-long-weekend-adventure-in-perth-1097" 
-                        class="text-primary font-semibold"
+                        class="text-primary font-semibold hover:underline"
                         target="_blank"
                     >
                         Swim with wild dolphins tour
@@ -107,7 +107,7 @@
                     from Rockingham, as well as tons of other wildlife tours in the area. You don’t have to be an amazing swimmer to enjoy this day out, either: just float on the surface with your masked face in the water to see bottlenose dolphins frolicking and dancing beneath you. Wildlife excursions are among the best 
                     <a 
                         href="https://www.10travlr.com.au/western-australia-holiday-tours" 
-                        class="text-primary font-semibold"
+                        class="text-primary font-semibold hover:underline"
                         target="_blank"
                     >
                         things to do in Perth</a>, and swimming with dolphins in their natural environment is absolutely one to add to the list.
@@ -129,7 +129,7 @@
                     Enjoy a 
                     <a 
                         href="https://www.10travlr.com.au/deals-and-offers/details/taste-your-way-around-perth-1050" 
-                        class="text-primary font-semibold"
+                        class="text-primary font-semibold hover:underline"
                         target="_blank"
                     >
                         laidback day cruise 
@@ -140,7 +140,7 @@
                     If you have a little more time, cruise an easy two and a half hours’ south along the coast from Perth to another foodie haven, where the quality of the local produce is matched only by the beauty of your surroundings. I’m talking, of course, about the stunning 
                     <a 
                         href="https://www.10travlr.com.au/deals-and-offers/details/highlights-of-the-south-west-1049" 
-                        class="text-primary font-semibold"
+                        class="text-primary font-semibold hover:underline"
                         target="_blank"
                     >
                         Margaret River
@@ -154,7 +154,7 @@
                     Take in Perth’s most incredible wildlife and city experiences 
                     <a 
                         href="https://www.10travlr.com.au/deals-and-offers/details/the-perfect-long-weekend-adventure-in-perth-1097" 
-                        class="text-primary font-semibold"
+                        class="text-primary font-semibold hover:underline"
                         target="_blank"
                     >
                         on this long weekend adventure</a>, which includes rickshaw rides, the Matagarup Zip+Climb, dolphin swims and more.
@@ -198,7 +198,7 @@
                     To get a 
                     <a 
                         href="https://www.10travlr.com.au/deals-and-offers/details/taste-your-way-around-perth-1050?" 
-                        class="text-primary font-semibold"
+                        class="text-primary font-semibold hover:underline"
                         target="_blank"
                     >
                         true taste of WA</a>, make a reservation at Wildflower, the rooftop restaurant at COMO The Treasury. Famous for honouring the six seasons of the Noongar calendar, expect native flavours such as marron, truffles, saltbush, and lemon myrtle. I’d also get yourself over to Double Rainbow for unforgettable Korean dishes and trot over to No Mafia for the delicious Italian share plates (also best to keep to yourself).
@@ -213,7 +213,7 @@
                     Book your 
                     <a 
                         href="/#choose-your-adventure" 
-                        class="text-primary font-semibold"
+                        class="text-primary font-semibold hover:underline"
                     >
                         Perth adventure now</a>.
                 </p>
