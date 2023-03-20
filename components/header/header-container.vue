@@ -1,6 +1,6 @@
 <template>
     <header 
-        class="bg-transparent absolute w-full z-20 overflow-hidden"
+        class="bg-transparent absolute w-full z-20 overflow-hidden text-gray-darkest"
         :class="{'h-screen inset-0 flex flex-col' : isMainNavShowed}"
     >
         <div 

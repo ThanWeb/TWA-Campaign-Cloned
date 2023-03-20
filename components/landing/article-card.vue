@@ -9,14 +9,14 @@
             </div>
             <div class="p-4 xl:px-8 lg:py-6 lg:flex lg:gap-x-2 gap-x-6 items-center">
                 <div class="">
-                    <p class="uppercase text-xs leading-5 tracking-widest">
+                    <p class="uppercase text-xs leading-5 tracking-widest text-gray-dark">
                         {{ category }}
                     </p>
                     <h3 class="text-xl font-semibold mb-2">
                         {{ title }}
                     </h3>
                 </div>
-                <button class="block w-full leading-6 rounded-3xl read-more-button uppercase py-3 font-semibold tracking-widest text-center mt-4 md:w-fit md:px-6 md:py-2 md:mt-3 lg:min-w-fit lg:px-4 lg:h-10 lg:py-0 lg:leading-10 lg:mt-0">
+                <button class="block w-full leading-6 rounded-3xl read-more-button uppercase py-3 font-semibold tracking-widest text-center mt-4 md:w-fit md:px-6 md:py-2 md:mt-3 lg:min-w-fit lg:px-4 lg:h-10 lg:py-0 lg:leading-10 lg:mt-0 text-gray-dark">
                     Read More
                 </button>
             </div>
