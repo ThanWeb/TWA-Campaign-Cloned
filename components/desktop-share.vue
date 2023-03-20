@@ -1,6 +1,9 @@
 <template>
-    <div class="h-screen fixed right-0 top-0 z-0 flex">
-        <div class="share-box hidden lg:flex flex-col bg-white h-fit gap-y-4 p-3 items-center my-auto">
+    <div 
+        class="h-36 fixed right-0 top-1/2 z-0 flex"
+        style="margin-top: -72px;"
+    >
+        <div class="share-box hidden lg:flex flex-col bg-white h-full gap-y-4 p-3 items-center justify-between">
             <p>Share:</p>
             <a 
                 href="https://www.facebook.com/sharer/sharer.php?u=https%3A//www.10travlr.com.au/western-australia-holiday-tours"
