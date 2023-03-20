@@ -3,7 +3,7 @@
         <div class="flex flex-col items-center py-12 max-width-desktop px-6 custom-width mx-auto">
             <nav class="mb-4">
                 <ul class="lg:flex gap-x-4">
-                    <li class="mb-6 text-center font-semibold text-sm">
+                    <li class="mb-6 text-center font-semibold text-sm hover:underline">
                         <a 
                             rel="external noopener" 
                             href="https://www.10travlr.com.au/pages/privacy-policy-1"
@@ -14,7 +14,7 @@
                     <li class="hidden lg:block">
                         .
                     </li>
-                    <li class="mb-6 text-center font-semibold text-sm">
+                    <li class="mb-6 text-center font-semibold text-sm hover:underline">
                         <a 
                             rel="external noopener" 
                             href="https://www.10travlr.com.au/pages/term-of-service-3"
@@ -25,7 +25,7 @@
                     <li class="hidden lg:block">
                         .
                     </li>
-                    <li class="mb-6 text-center font-semibold text-sm">
+                    <li class="mb-6 text-center font-semibold text-sm hover:underline">
                         <a 
                             rel="external noopener" 
                             href="https://www.10travlr.com.au/pages/refund-policy-5"
@@ -51,7 +51,7 @@
                     class="text-sm flex items-center mx-auto lg:mx-0" 
                     @click="scrollToTop"
                 >
-                    <span>
+                    <span class="hover:underline">
                         Back to top 
                     </span>
                     <img 
