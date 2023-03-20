@@ -78,6 +78,11 @@ export default {
             .main-header:not(.showed) .book-now-button {
                 color: $white;
                 border-color: $white;
+
+                &:hover {
+                    color: $primary-color;
+                    background-color: $white;
+                }
             }
         }
     }
@@ -93,6 +98,12 @@ export default {
             .main-header:not(.showed) .book-now-button {
                 color: $secondary-color;
                 border-color: $secondary-color;
+
+                &:hover {
+                    border-color: $primary-color;
+                    background-color: $primary-color;
+                    color: $white;
+                }
             }
         }
     }
