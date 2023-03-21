@@ -13,6 +13,8 @@
 </template>
 
 <script lang="ts">
+import 'vue3-carousel/dist/carousel.css'
+
 export default {
     data () {
         return {
