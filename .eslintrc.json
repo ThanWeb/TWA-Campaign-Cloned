@@ -31,6 +31,7 @@
         "quotes": ["error", "single", { "allowTemplateLiterals": true }],
         "jsx-quotes": ["error", "prefer-single"],
         "eol-last": ["error", "always"],
-        "comma-dangle": "error"
+        "comma-dangle": "error",
+        "@typescript-eslint/no-explicit-any": "off"
     }
 }

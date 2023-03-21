@@ -124,11 +124,14 @@
                     Follow in the footsteps of wa's ‘best’ tour guide joel creasey with these unforgettable trips, as seen on network 10
                 </p>
             </header>
-            <div class="flex flex-col gap-y-6 custom-width mx-auto lg:flex-row">
+            <div class="flex flex-col gap-y-6 custom-width mx-auto lg:flex-row lg:gap-x-2 items-stretch">
                 <LandingDealsCarousel 
                     v-for="(deals, index) in mainDeals"
                     v-bind="deals"
                     :key="index"
+                    :carousel-index="index"
+                    :active-carousel="selectedCarousel"
+                    @click="changeSelectedCarousel(index)"
                 />
             </div>
         </div>
@@ -338,7 +341,8 @@ interface Data {
     secondaryDeals: Array<SecondaryDeals>,
     categoryItem: Array<CategoryItem>,
     nameInput: string,
-    emailInput: string
+    emailInput: string,
+    selectedCarousel: number
 }
 
 interface Articles {
@@ -583,7 +587,8 @@ export default {
                 }
             ],
             nameInput: '',
-            emailInput: ''
+            emailInput: '',
+            selectedCarousel: 0
         }
     },
     mounted() {
@@ -591,10 +596,13 @@ export default {
     },
     methods: {
         getVideoBackgroundHeight() {
-            // const videoBgHeight = document.querySelector('#video-background')?.clientHeight
-            // this.videoBackgroundHeight = `${videoBgHeight}`
             const vh = window.innerHeight * 0.01
             document?.documentElement.style.setProperty('--vh', `${vh}px`)
+        },
+        changeSelectedCarousel (index: number) {
+            if (this.selectedCarousel !== index) {
+                this.selectedCarousel = index
+            }
         },
         checkEmailIsValid () {
             const regexExp = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/gi
@@ -626,6 +634,10 @@ export default {
 
         .swipe-deals {
             filter: invert(.9);
+        }
+
+        .carousel-item {
+            width: 100%;
         }
     }
 
