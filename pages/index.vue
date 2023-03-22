@@ -135,8 +135,8 @@
                 />
             </div>
         </div>
-        <div class="you-may-also-like-section px-6 lg:px-0 mt-12"> 
-            <header class="uppercase text-gray-darkest custom-width mx-auto">
+        <div class="you-may-also-like-section px-6 lg:px-0 mt-12 custom-width mx-auto"> 
+            <header class="uppercase text-gray-darkest custom-width">
                 <h1 class="header-border mb-2 tracking-widest">
                     You May Also Like
                 </h1>
@@ -144,10 +144,11 @@
                     spectacular WA trips Joel didn’t get to take (but you can)
                 </p>
             </header>
-            <div class="lg:flex lg:gap-x-4 lg:justify-center lg:px-2 lg:items-center">
-                <button 
+            <div class="lg:flex lg:gap-x-4 lg:justify-center lg:px-2 lg:items-center lg:relative">
+                <button
                     type="button"
-                    class="hidden xl:flex w-12 h-12 swipe-button items-center justify-center rounded-full cursor-pointer"
+                    class="prev-secondary-deal-button hidden lg:flex lg:hidden w-12 h-12 swipe-button items-center justify-center rounded-full cursor-pointer absolute right-full mr-4"
+                    @click="prevSecondaryDeals"
                 >
                     <img 
                         src="/images/icons/icon-left.svg" 
@@ -155,16 +156,42 @@
                         class="swipe-deals"
                     >
                 </button>
-                <div class="py-6 scroll-height-0 text-gray-darker custom-width mx-auto lg:flex">
-                    <LandingDealsCard
-                        v-for="(deals, index) in secondaryDeals"
-                        :key="index"
-                        v-bind="deals" 
-                    />
+                <div class="scroll-height-0 text-gray-darker custom-width mx-auto">
+                    <div class="hidden lg:block">
+                        <carousel 
+                            ref="secondaryDealsCarousel"
+                            :settings="carouselSettings" 
+                            :breakpoints="carouselBreakpoints"
+                            @slide-end="hideOrShowSecondaryDealsCarouselButton()"
+                        >
+                            <slide
+                                v-for="(deals, index) in secondaryDeals"
+                                :key="index" 
+                            >
+                                <LandingDealsCard v-bind="deals" />
+                            </slide>
+                        </carousel>
+                    </div>
+                    <div class="py-6 overflow-auto scroll-height-0 lg:hidden">
+                        <table class="min-w-full">
+                            <tbody>
+                                <tr class="flex items-start gap-x-4">
+                                    <td
+                                        v-for="(deals, index) in secondaryDeals"
+                                        :key="index"
+                                        class="w-72"
+                                    >
+                                        <LandingDealsCard v-bind="deals" />
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
-                <button 
+                <button
                     type="button"
-                    class="hidden xl:flex w-12 h-12 swipe-button items-center justify-center rounded-full cursor-pointer"
+                    class="next-secondary-deal-button hidden lg:flex w-12 h-12 swipe-button items-center justify-center rounded-full cursor-pointer absolute left-full ml-4"
+                    @click="nextSecondaryDeals"
                 >
                     <img 
                         src="/images/icons/icon-right.svg" 
@@ -173,7 +200,7 @@
                     >
                 </button>
             </div>
-            <div class="flex flex-col lg:flex-row lg:mt-14 lg:gap-x-6 text-gray-med custom-width mx-auto">
+            <div class="flex flex-col lg:flex-row lg:mt-9 lg:gap-x-6 text-gray-med custom-width mx-auto">
                 <LandingCategoryCard 
                     v-for="(item, index) in categoryItem"
                     v-bind="item" 
@@ -332,6 +359,8 @@
 </template>
 
 <script lang='ts'>
+import { Carousel, Slide } from 'vue3-carousel'
+
 interface Data {
     videoBackgroundHeight: string,
     galeryImages: Array<string>,
@@ -342,7 +371,9 @@ interface Data {
     categoryItem: Array<CategoryItem>,
     nameInput: string,
     emailInput: string,
-    selectedCarousel: number
+    selectedCarousel: number,
+    carouselSettings: object,
+    carouselBreakpoints: object
 }
 
 interface Articles {
@@ -388,6 +419,10 @@ interface CategoryItem {
 
 export default {
     name: 'LandingPage',
+    components: {
+        'carousel': Carousel,
+        'slide': Slide
+    },
     data (): Data {
         return {
             videoBackgroundHeight: '0',
@@ -588,7 +623,21 @@ export default {
             ],
             nameInput: '',
             emailInput: '',
-            selectedCarousel: 0
+            selectedCarousel: 0,
+            carouselSettings: {
+                itemsToShow: 1,
+                snapAlign: 'start'
+            },
+            carouselBreakpoints: {
+                640: {
+                    itemsToShow: 1,
+                    snapAlign: 'start'
+                },
+                1024: {
+                    itemsToShow: 2,
+                    snapAlign: 'start'
+                }
+            }
         }
     },
     mounted() {
@@ -607,6 +656,33 @@ export default {
         checkEmailIsValid () {
             const regexExp = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/gi
             return regexExp.test(this.emailInput)
+        },
+        prevSecondaryDeals() {
+            (this.$refs['secondaryDealsCarousel'] as any).prev()
+        },
+        nextSecondaryDeals() {
+            (this.$refs['secondaryDealsCarousel'] as any).next()
+        },
+        hideOrShowSecondaryDealsCarouselButton() {
+            const secondaryDeals = document.querySelectorAll('.you-may-also-like-section .carousel__slide')
+            const prevSecondaryDealBtn: HTMLButtonElement | null = document.querySelector('.prev-secondary-deal-button')
+            const nextSecondaryDealBtn: HTMLButtonElement | null = document.querySelector('.next-secondary-deal-button')
+
+            if (secondaryDeals[0].classList.contains('carousel__slide--active')) {
+                prevSecondaryDealBtn?.classList.add('lg:hidden')
+            } else if (secondaryDeals[3].classList.contains('carousel__slide--active')) {
+                nextSecondaryDealBtn?.classList.add('lg:hidden')
+            } else {
+                if (prevSecondaryDealBtn?.classList.contains('lg:hidden')) {
+                    prevSecondaryDealBtn.classList.remove('lg:hidden')
+                }
+
+                if (nextSecondaryDealBtn?.classList.contains('lg:hidden')) {
+                    nextSecondaryDealBtn.classList.remove('lg:hidden')
+                }
+            }
+            // eslint-disable-next-line no-console
+            console.log(secondaryDeals[0])
         }
     }
 }
@@ -638,6 +714,22 @@ export default {
 
         .carousel-item {
             width: 100%;
+        }
+
+        @media screen and (min-width: 1024px) { 
+            .carousel__slide > div {
+                padding: 0 24px;
+            }
+
+            .carousel__slide--active > div {
+                padding-left: 0;
+                padding-right: 12px;
+            }
+
+            .carousel__slide--next > div {
+                padding-left: 12px;
+                padding-right: 0;
+            }
         }
     }
 

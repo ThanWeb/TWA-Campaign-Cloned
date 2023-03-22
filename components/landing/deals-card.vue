@@ -1,40 +1,40 @@
 <template>
-    <div class="deals-card rounded-lg overflow-hidden hover-zoom-image w-1/2">
-        <NuxtLink 
-            :to="articleLink"
-            target="_blank"
-        >
-            <div class="overflow-hidden">
-                <img 
-                    :src="`/images/secondary-deals/${image}`" 
-                    :alt="heading"
-                >
+    <div class="deals-card rounded-lg overflow-hidden hover-zoom-image lg:my-6">
+        <div class="overflow-hidden lg:h-64 object-contain w-full">
+            <img 
+                :src="`/images/secondary-deals/${image}`" 
+                :alt="heading"
+                class="w-full lg:rounded-lg"
+            >
+        </div>
+        <div class="p-4 lg:flex flex-row lg:text-left items-center gap-x-8">
+            <div class="lg:w-7/12">
+                <span class="uppercase text-xs leading-5">  
+                    {{ location }}
+                </span>
+                <h3 class="text-xl font-semibold mb-2 overflow-hidden text-ellipsis box-orient-vertical line-clamp-2 text-gray-darkest lg:h-14">
+                    {{ heading }}
+                </h3>
+                <p class="text-base mb-3 overflow-hidden text-ellipsis box-orient-vertical line-clamp-1">
+                    {{ description }}
+                </p>
             </div>
-            <div class="p-4 lg:flex flex-row">
-                <div>
-                    <span class="uppercase text-xs leading-5">  
-                        {{ location }}
+            <div class="lg:w-5/12">
+                <p class="text-xs mb-2">
+                    Starts from<br>
+                    <span class="text-xl font-semibold text-gray-darkest">
+                        ${{ price }}
                     </span>
-                    <h3 class="text-xl font-semibold mb-2 overflow-hidden text-ellipsis box-orient-vertical line-clamp-2 text-gray-darkest">
-                        {{ heading }}
-                    </h3>
-                    <p class="text-base mb-3 overflow-hidden text-ellipsis box-orient-vertical line-clamp-1">
-                        {{ description }}
-                    </p>
-                </div>
-                <div>
-                    <p class="text-xs mb-2">
-                        Starts from<br>
-                        <span class="text-xl font-semibold text-gray-darkest">
-                            ${{ price }}
-                        </span>
-                    </p>
-                    <button class="w-full leading-6 rounded-3xl view-package-button uppercase py-3 font-semibold tracking-widest text-center">
-                        View Package
-                    </button>
-                </div>
+                </p>
+                <NuxtLink 
+                    :to="articleLink"
+                    target="_blank"
+                    class="w-full block leading-6 rounded-3xl view-package-button uppercase py-3 font-semibold tracking-widest text-center lg:mt-2 lg:py-2"
+                >
+                    View Package
+                </NuxtLink>
             </div>
-        </NuxtLink>
+        </div>
     </div>
 </template>
 

@@ -38,8 +38,7 @@
                 <div class="top-0 overflow-hidden image-height">
                     <carousel 
                         :ref="`imageCarousel-${carouselIndex}`"
-                        :settings="carouselSettings" 
-                        :breakpoints="carouselBreakpoints"
+                        :settings="carouselSettings"
                         :wrap-around="true"
                     >
                         <slide
@@ -188,16 +187,6 @@ export default {
             carouselSettings: {
                 itemsToShow: 1,
                 snapAlign: 'start'
-            },
-            carouselBreakpoints: {
-                640: {
-                    itemsToShow: 1,
-                    snapAlign: 'start'
-                },
-                1024: {
-                    itemsToShow: 1,
-                    snapAlign: 'start'
-                }
             }
         }
     },
@@ -223,8 +212,6 @@ export default {
 
 <style lang="scss" scoped>
     .deals-carousel {
-        transition-duration: 0.4s;
-        transition-property: width;
         &.active {
             height: fit-content;
         }
