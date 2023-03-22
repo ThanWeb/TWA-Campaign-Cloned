@@ -3,8 +3,11 @@
         class="deals-carousel rounded-lg overflow-hidden text-gray-darker"
         :class="carouselIndex === activeCarousel ? 'active' : 'inactive'" 
     >
-        <div class="bg-white rounded-lg main-content">
-            <div class="">
+        <div
+            v-if="carouselIndex === activeCarousel || !isViewportDesktop()"
+            class="bg-white rounded-lg main-content"
+        >
+            <div>
                 <div class="relative">
                     <div 
                         class="absolute flex justify-between px-4 w-full z-10"
@@ -34,8 +37,9 @@
                 </div>
                 <div class="top-0 overflow-hidden image-height">
                     <carousel 
-                        ref="imageCarousel"
-                        :items-to-show="1"
+                        :ref="`imageCarousel-${carouselIndex}`"
+                        :settings="carouselSettings" 
+                        :breakpoints="carouselBreakpoints"
                         :wrap-around="true"
                     >
                         <slide
@@ -117,7 +121,7 @@
                 </div>
             </div>
         </div>
-        <div 
+        <div
             class="cover-content items-center justify-center text-ellipsis whitespace-nowrap overflow-hidden h-full relative cursor-pointer bg-cover"
             :style="`background-image:url('/images/main-deals/${images[0]}');`"
         >
@@ -133,8 +137,8 @@ import { Carousel, Slide } from 'vue3-carousel'
 
 export default {
     components: {
-        Carousel,
-        Slide
+        'carousel': Carousel,
+        'slide': Slide
     },
     props: {
         location: {
@@ -180,7 +184,21 @@ export default {
     },
     data () {
         return {
-            isInclusionsShowed: false
+            isInclusionsShowed: false,
+            carouselSettings: {
+                itemsToShow: 1,
+                snapAlign: 'start'
+            },
+            carouselBreakpoints: {
+                640: {
+                    itemsToShow: 1,
+                    snapAlign: 'start'
+                },
+                1024: {
+                    itemsToShow: 1,
+                    snapAlign: 'start'
+                }
+            }
         }
     },
     methods: {
@@ -188,10 +206,16 @@ export default {
             this.isInclusionsShowed = !this.isInclusionsShowed
         },
         prevImage() {
-            (this.$refs['imageCarousel'] as any).prev()
+            (this.$refs[`imageCarousel-${this.carouselIndex}`] as any).prev()
         },
         nextImage() {
-            (this.$refs['imageCarousel'] as any).next()
+            (this.$refs[`imageCarousel-${this.carouselIndex}`] as any).next()
+        },
+        isViewportDesktop() {
+            if (process.client) { 
+                return screen.width > 1024
+            }
+            return false
         }
     }
 }
@@ -222,21 +246,14 @@ export default {
             .image-height {
                 height: 460px;
             }
+
             &.inactive {
-                .main-content {
-                    display: none;
-                }
-    
                 .cover-content {
-                    display: flex;
+                    display: block;
                 }    
             }
 
             &.active {
-                .main-content {
-                    display: block;
-                }
-
                 .cover-content {
                     display: none;
                 }

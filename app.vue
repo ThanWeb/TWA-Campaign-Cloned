@@ -22,20 +22,18 @@ export default {
         }
     },
     created () {
-        // eslint-disable-next-line no-undef
         if (process.client) { 
             window.addEventListener('scroll', this.handleScroll)
         }
     },
     unmounted () {
-        // eslint-disable-next-line no-undef
         if (process.client) { 
             window.removeEventListener('scroll', this.handleScroll)
         }
     },
     methods: {
         handleScroll () {
-            // eslint-disable-next-line no-undef
+
             if (process.client) {
                 this.scrollY = window.scrollY
             }

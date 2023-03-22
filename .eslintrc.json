@@ -32,6 +32,7 @@
         "jsx-quotes": ["error", "prefer-single"],
         "eol-last": ["error", "always"],
         "comma-dangle": "error",
-        "@typescript-eslint/no-explicit-any": "off"
+        "@typescript-eslint/no-explicit-any": "off",
+        "no-undef": "off"
     }
 }
