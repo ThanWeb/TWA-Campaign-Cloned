@@ -70,14 +70,45 @@
                 </article>
             </div>
 
-            <figure class="flex mt-12 overflow-hidden">
-                <img 
-                    v-for="(image, index) in galeryImages"
-                    :key="index"
-                    :src="`/images/overview/${image}`"
-                    :alt="`Image-${index + 1}`"
-                >
-            </figure>
+            <div class="mt-12 gallery-image-container">
+                <div class="hidden lg:flex">
+                    <img 
+                        v-for="(image, index) in galeryImages"
+                        :key="index"
+                        :src="`/images/overview/${image}`"
+                        :alt="`Image-${index + 1}`"
+                    >
+                </div>
+                <div class="lg:hidden">
+                    <carousel 
+                        ref="galleryImage"
+                        v-model="currentImageInGalleryImage"
+                        :items-to-show="1" 
+                        :wrap-around="true"
+                        @slide-end="updatePaginationButton()"
+                    >
+                        <slide
+                            v-for="(image, index) in galeryImages"
+                            :key="index" 
+                        >
+                            <img 
+                                :src="`/images/overview/${image}`"
+                                :alt="`Image-${index + 1}`"
+                                class="md:h-64 w-full object-cover"
+                            >
+                        </slide>
+                    </carousel>
+                    <div class="flex gap-x-1.5 mt-3 justify-center items-center">
+                        <button
+                            v-for="(image, index) in galeryImages"
+                            :key="index"
+                            class="gallery-image-button rounded-full"
+                            :class="{'active' : index === 0, 'near' : index === 1, 'far' : index === 2}"
+                            @click="slideGalleryImage(index)"
+                        />
+                    </div>
+                </div>
+            </div>
         </div>
         <div    
             id="destinations" 
@@ -373,7 +404,8 @@ interface Data {
     emailInput: string,
     selectedCarousel: number,
     carouselSettings: object,
-    carouselBreakpoints: object
+    carouselBreakpoints: object,
+    currentImageInGalleryImage: number
 }
 
 interface Articles {
@@ -637,7 +669,8 @@ export default {
                     itemsToShow: 2,
                     snapAlign: 'start'
                 }
-            }
+            },
+            currentImageInGalleryImage: 0
         }
     },
     mounted() {
@@ -681,8 +714,34 @@ export default {
                     nextSecondaryDealBtn.classList.remove('lg:hidden')
                 }
             }
-            // eslint-disable-next-line no-console
-            console.log(secondaryDeals[0])
+        },
+        slideGalleryImage(index: number) {
+            (this.$refs['galleryImage'] as any).slideTo(index)
+        },
+        updatePaginationButton() {
+            const galleryImagesButtons: NodeListOf<HTMLButtonElement> | null = document.querySelectorAll('.gallery-image-button')
+
+            for (let i = 0; i < galleryImagesButtons.length; i++) {
+                galleryImagesButtons[i].classList.remove('active', 'near', 'far')
+            }
+
+            galleryImagesButtons[this.currentImageInGalleryImage].classList.add('active')
+
+            if (galleryImagesButtons[this.currentImageInGalleryImage + 1]) {
+                galleryImagesButtons[this.currentImageInGalleryImage + 1].classList.add('near')
+            }    
+
+            if (galleryImagesButtons[this.currentImageInGalleryImage - 1]) {
+                galleryImagesButtons[this.currentImageInGalleryImage - 1].classList.add('near')
+            }    
+
+            if (galleryImagesButtons[this.currentImageInGalleryImage + 2]) {
+                galleryImagesButtons[this.currentImageInGalleryImage + 2].classList.add('far')
+            }    
+
+            if (galleryImagesButtons[this.currentImageInGalleryImage - 2]) {
+                galleryImagesButtons[this.currentImageInGalleryImage - 2].classList.add('far')
+            }
         }
     }
 }
@@ -692,6 +751,29 @@ export default {
     .height-viewport {
         height: 100vh; /* Fallback for browsers that do not support Custom Properties */
         height: calc(var(--vh, 1vh) * 100);
+    }
+
+    .gallery-image-button {
+        transition: 0.4s;
+        width: 2px;
+        height: 2px;
+        background-color: $gray-lighter;
+
+        &.far {
+            width: 4px;
+            height: 4px;
+        }
+
+        &.near {
+            width: 6px;
+            height: 6px;
+        }
+
+        &.active {
+            width: 6px;
+            height: 6px;
+            background-color: $primary-color;
+        }
     }
 
     .you-may-also-like-section {
