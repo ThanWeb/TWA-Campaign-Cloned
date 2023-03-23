@@ -37,7 +37,7 @@
         </div>
         <div 
             id="overview" 
-            class="overview-section mt-6 mb-12 text-gray-darkest"
+            class="overview-section mt-6 mb-12 lg:mb-16 text-gray-darkest"
         >
             <div class="lg:flex lg:my-20 items-center custom-width mx-auto">
                 <header class="mx-6 lg:w-2/5">
@@ -70,13 +70,17 @@
                 </article>
             </div>
 
-            <div class="mt-12 gallery-image-container">
-                <div class="hidden lg:flex">
-                    <img 
-                        v-for="(image, index) in galeryImages"
+            <div class="mt-12">
+                <div 
+                    class="hidden lg:flex"
+                    :style="`transform: translateX(-${verticalScroll - 600}px);`"
+                >
+                    <img
+                        v-for="index in galeryImages.length * 2"
                         :key="index"
-                        :src="`/images/overview/${image}`"
-                        :alt="`Image-${index + 1}`"
+                        :src="`/images/overview/${galeryImages[((index - 1)% galeryImages.length)]}`"
+                        :alt="`Image-${index}`"
+                        :class="{'lg:h-80 lg:w-80' : index % 5 === 2, 'more-higher' : index % 5 === 3, 'more-wider' : index % 5 !== 2 && index % 5 !== 3}"
                     >
                 </div>
                 <div class="lg:hidden">
@@ -458,6 +462,12 @@ export default {
         'carousel': Carousel,
         'slide': Slide
     },
+    props: {
+        verticalScroll: {
+            type: Number,
+            default: 0
+        }
+    },
     data (): Data {
         return {
             videoBackgroundHeight: '0',
@@ -725,27 +735,40 @@ export default {
         height: 100vh; /* Fallback for browsers that do not support Custom Properties */
         height: calc(var(--vh, 1vh) * 100);
     }
-
-    .gallery-image-button {
-        transition: 0.4s;
-        width: 2px;
-        height: 2px;
-        background-color: $gray-lighter;
-
-        &.far {
-            width: 4px;
-            height: 4px;
+    .overview-section {
+        .gallery-image-button {
+            transition: 0.4s;
+            width: 2px;
+            height: 2px;
+            background-color: $gray-lighter;
+    
+            &.far {
+                width: 4px;
+                height: 4px;
+            }
+    
+            &.near {
+                width: 6px;
+                height: 6px;
+            }
+    
+            &.active {
+                width: 6px;
+                height: 6px;
+                background-color: $primary-color;
+            }
         }
 
-        &.near {
-            width: 6px;
-            height: 6px;
-        }
+        @media screen and (min-width: 1024px) {
+            .more-wider {
+                width: 360px;
+                height: 240px;
+            }
 
-        &.active {
-            width: 6px;
-            height: 6px;
-            background-color: $primary-color;
+            .more-higher {
+                width: 280px;
+                height: 360px;
+            }
         }
     }
 

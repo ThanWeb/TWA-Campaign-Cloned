@@ -5,7 +5,7 @@
     >
         <NuxtLayout>
             <main class="main-container">
-                <NuxtPage />
+                <NuxtPage :vertical-scroll="scrollY" />
             </main>
             <DesktopShare />
         </NuxtLayout>
@@ -33,7 +33,6 @@ export default {
     },
     methods: {
         handleScroll () {
-
             if (process.client) {
                 this.scrollY = window.scrollY
             }
