@@ -177,8 +177,9 @@
             </header>
             <div class="lg:flex lg:gap-x-4 lg:justify-center lg:px-2 lg:items-center lg:relative">
                 <button
+                    v-if="currentSecondaryDeals !== 0"
                     type="button"
-                    class="prev-secondary-deal-button hidden lg:flex lg:hidden w-12 h-12 swipe-button items-center justify-center rounded-full cursor-pointer absolute right-full mr-4"
+                    class="prev-secondary-deal-button hidden lg:flex w-12 h-12 swipe-button items-center justify-center rounded-full cursor-pointer absolute right-full mr-4"
                     @click="prevSecondaryDeals"
                 >
                     <img 
@@ -191,9 +192,9 @@
                     <div class="hidden lg:block">
                         <carousel 
                             ref="secondaryDealsCarousel"
+                            v-model="currentSecondaryDeals"
                             :settings="carouselSettings" 
                             :breakpoints="carouselBreakpoints"
-                            @slide-end="hideOrShowSecondaryDealsCarouselButton()"
                         >
                             <slide
                                 v-for="(deals, index) in secondaryDeals"
@@ -220,6 +221,7 @@
                     </div>
                 </div>
                 <button
+                    v-if="currentSecondaryDeals !== 3"
                     type="button"
                     class="next-secondary-deal-button hidden lg:flex w-12 h-12 swipe-button items-center justify-center rounded-full cursor-pointer absolute left-full ml-4"
                     @click="nextSecondaryDeals"
@@ -405,6 +407,7 @@ interface Data {
     selectedCarousel: number,
     carouselSettings: object,
     carouselBreakpoints: object,
+    currentSecondaryDeals: number,
     currentImageInGalleryImage: number
 }
 
@@ -670,6 +673,7 @@ export default {
                     snapAlign: 'start'
                 }
             },
+            currentSecondaryDeals: 0,
             currentImageInGalleryImage: 0
         }
     },
@@ -696,52 +700,21 @@ export default {
         nextSecondaryDeals() {
             (this.$refs['secondaryDealsCarousel'] as any).next()
         },
-        hideOrShowSecondaryDealsCarouselButton() {
-            const secondaryDeals = document.querySelectorAll('.you-may-also-like-section .carousel__slide')
-            const prevSecondaryDealBtn: HTMLButtonElement | null = document.querySelector('.prev-secondary-deal-button')
-            const nextSecondaryDealBtn: HTMLButtonElement | null = document.querySelector('.next-secondary-deal-button')
-
-            if (secondaryDeals[0].classList.contains('carousel__slide--active')) {
-                prevSecondaryDealBtn?.classList.add('lg:hidden')
-            } else if (secondaryDeals[3].classList.contains('carousel__slide--active')) {
-                nextSecondaryDealBtn?.classList.add('lg:hidden')
-            } else {
-                if (prevSecondaryDealBtn?.classList.contains('lg:hidden')) {
-                    prevSecondaryDealBtn.classList.remove('lg:hidden')
-                }
-
-                if (nextSecondaryDealBtn?.classList.contains('lg:hidden')) {
-                    nextSecondaryDealBtn.classList.remove('lg:hidden')
-                }
-            }
-        },
         slideGalleryImage(index: number) {
             (this.$refs['galleryImage'] as any).slideTo(index)
         },
         updatePaginationButton() {
             const galleryImagesButtons: NodeListOf<HTMLButtonElement> | null = document.querySelectorAll('.gallery-image-button')
 
-            for (let i = 0; i < galleryImagesButtons.length; i++) {
-                galleryImagesButtons[i].classList.remove('active', 'near', 'far')
-            }
-
+            galleryImagesButtons.forEach(element => {
+                element.classList.remove('active', 'near', 'far')
+            })
+            
             galleryImagesButtons[this.currentImageInGalleryImage].classList.add('active')
-
-            if (galleryImagesButtons[this.currentImageInGalleryImage + 1]) {
-                galleryImagesButtons[this.currentImageInGalleryImage + 1].classList.add('near')
-            }    
-
-            if (galleryImagesButtons[this.currentImageInGalleryImage - 1]) {
-                galleryImagesButtons[this.currentImageInGalleryImage - 1].classList.add('near')
-            }    
-
-            if (galleryImagesButtons[this.currentImageInGalleryImage + 2]) {
-                galleryImagesButtons[this.currentImageInGalleryImage + 2].classList.add('far')
-            }    
-
-            if (galleryImagesButtons[this.currentImageInGalleryImage - 2]) {
-                galleryImagesButtons[this.currentImageInGalleryImage - 2].classList.add('far')
-            }
+            galleryImagesButtons[this.currentImageInGalleryImage + 1]?.classList.add('near')
+            galleryImagesButtons[this.currentImageInGalleryImage - 1]?.classList.add('near')
+            galleryImagesButtons[this.currentImageInGalleryImage + 2]?.classList.add('far')
+            galleryImagesButtons[this.currentImageInGalleryImage - 2]?.classList.add('far')
         }
     }
 }
