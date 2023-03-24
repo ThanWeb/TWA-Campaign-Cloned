@@ -81,7 +81,7 @@
                         :src="`/images/overview/${galeryImages[((index - 1)% galeryImages.length)]}`"
                         :alt="`Image-${index}`"
                         class="object-cover image-item"
-                        :class="{'square' : index % 5 === 2, 'more-higher' : index % 5 === 3, 'more-wider' : index % 5 !== 2 && index % 5 !== 3, 'floating' : verticalScroll + 100 >= miniGalleryScrollTopPos}"
+                        :class="{'square' : index % 5 === 2, 'more-higher' : index % 5 === 3, 'more-wider' : index % 5 !== 2 && index % 5 !== 3, 'floating' : verticalScroll + 180 >= miniGalleryScrollTopPos}"
                     >
                 </div>
                 <div class="lg:hidden">
@@ -439,7 +439,8 @@ interface MainDeals {
     details: Array<string>,
     validUntil: string,
     days: number,
-    price: string
+    price: string,
+    url: string
 }
 
 interface SecondaryDeals {
@@ -540,7 +541,8 @@ export default {
                     ],
                     validUntil: '31 March 2023',
                     days: 5,
-                    price: '685'
+                    price: '685',
+                    url: 'https://www.10travlr.com.au/deals-and-offers/details/a-taste-of-perth-1050'
                 },
                 {
                     location: 'Perth',
@@ -561,7 +563,8 @@ export default {
                     ],
                     validUntil: '31 March 2023',
                     days: 4,
-                    price: '779'
+                    price: '779',
+                    url: 'https://www.10travlr.com.au/deals-and-offers/details/long-weekend-in-perth-adventure-coastal-and-wildlife-1097'
                 },
                 {
                     location: 'Kununurra',
@@ -582,7 +585,8 @@ export default {
                     ],
                     validUntil: '31 March 2023',
                     days: 5,
-                    price: '1,749'
+                    price: '1,749',
+                    url: 'https://www.10travlr.com.au/deals-and-offers/details/4-nights-kununurra-aquatic-nature-and-wildlife-adventure-1082'
                 },
                 {
                     location: 'Kununurra',
@@ -603,7 +607,8 @@ export default {
                     ],
                     validUntil: '31 March 2023',
                     days: 6,
-                    price: '2,499'
+                    price: '2,499',
+                    url: 'https://www.10travlr.com.au/deals-and-offers/details/5-nights-cultural-odyssey-in-kununurra-1094'
                 }
             ],
             secondaryDeals: [

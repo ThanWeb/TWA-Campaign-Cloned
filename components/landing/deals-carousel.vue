@@ -113,9 +113,13 @@
                         </p>
                     </div>
                     <div class="lg:w-1/2">
-                        <button class="w-full md:py-2 md:mt-3 lg:w-full lg:px-0 lg:mt-0 leading-6 rounded-3xl see-more-button uppercase mt-4 py-3 font-semibold tracking-widest text-center">
+                        <NuxtLink 
+                            :to="url"
+                            target="_blank"
+                            class="block w-full md:py-2 md:mt-3 lg:w-full lg:px-0 lg:mt-0 leading-6 rounded-3xl see-more-button uppercase mt-4 py-3 font-semibold tracking-widest text-center"
+                        >
                             See More
-                        </button>
+                        </NuxtLink>
                     </div>
                 </div>
             </div>
@@ -179,6 +183,10 @@ export default {
         activeCarousel: {
             type: Number,
             default: 0
+        },
+        url: {
+            type: String,
+            default: 'https://www.10travlr.com.au/'
         }
     },
     data () {
