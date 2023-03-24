@@ -72,15 +72,16 @@
 
             <div class="mt-12">
                 <div 
-                    class="hidden lg:flex"
-                    :style="`transform: translateX(-${verticalScroll - 600}px);`"
+                    class="hidden lg:flex mini-gallery items-end"
+                    :style="`transform: translateX(${miniGalleryScrollTopPos - verticalScroll}px);`"
                 >
                     <img
                         v-for="index in galeryImages.length * 2"
                         :key="index"
                         :src="`/images/overview/${galeryImages[((index - 1)% galeryImages.length)]}`"
                         :alt="`Image-${index}`"
-                        :class="{'lg:h-80 lg:w-80' : index % 5 === 2, 'more-higher' : index % 5 === 3, 'more-wider' : index % 5 !== 2 && index % 5 !== 3}"
+                        class="object-cover image-item"
+                        :class="{'square' : index % 5 === 2, 'more-higher' : index % 5 === 3, 'more-wider' : index % 5 !== 2 && index % 5 !== 3, 'floating' : verticalScroll + 100 >= miniGalleryScrollTopPos}"
                     >
                 </div>
                 <div class="lg:hidden">
@@ -412,7 +413,8 @@ interface Data {
     carouselSettings: object,
     carouselBreakpoints: object,
     currentSecondaryDeals: number,
-    currentImageInGalleryImage: number
+    currentImageInGalleryImage: number,
+    miniGalleryScrollTopPos: number
 }
 
 interface Articles {
@@ -684,11 +686,19 @@ export default {
                 }
             },
             currentSecondaryDeals: 0,
-            currentImageInGalleryImage: 0
+            currentImageInGalleryImage: 0,
+            miniGalleryScrollTopPos: 0
         }
     },
     mounted() {
         this.getVideoBackgroundHeight()
+        
+        if (process.client) {
+            const miniGallery: HTMLElement | null = document?.querySelector('.mini-gallery')
+            if (miniGallery) {
+                this.miniGalleryScrollTopPos = miniGallery.offsetTop
+            }
+        }
     },
     methods: {
         getVideoBackgroundHeight() {
@@ -736,6 +746,22 @@ export default {
         height: calc(var(--vh, 1vh) * 100);
     }
     .overview-section {
+        .mini-gallery {
+            .image-item {
+                transition: 0.4s;
+            }
+
+            .floating {
+                &.more-wider {
+                    transform: translateY($wider-floating);
+                }
+
+                &.square {
+                    transform: translateY($square-floating);
+                }
+            }
+        }
+
         .gallery-image-button {
             transition: 0.4s;
             width: 2px;
@@ -760,14 +786,18 @@ export default {
         }
 
         @media screen and (min-width: 1024px) {
+            .square {
+                width: $square-width;
+                height: $square-height;
+            }
             .more-wider {
-                width: 360px;
-                height: 240px;
+                width: $wider-width;
+                height: $wider-height;
             }
 
             .more-higher {
-                width: 280px;
-                height: 360px;
+                width: $higher-width;
+                height: $higher-height;
             }
         }
     }

@@ -17,3 +17,13 @@ $white: #FFF !default;
 
 // 2 Another
 $header-height: 88px;
+
+// 3 Mini Gallery Image Size On Desktop
+$square-width: 320px;
+$square-height: 320px;
+$wider-width: 360px;
+$wider-height: 240px;
+$higher-width: 280px;
+$higher-height: 360px;
+$square-floating: $square-height - $higher-height;
+$wider-floating: $wider-height - $higher-height;
