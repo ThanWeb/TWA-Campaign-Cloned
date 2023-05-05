@@ -47,7 +47,7 @@
                     </li>
                 </ul>
                 <img 
-                    :src="isMainNavShowed ? '/images/logo/10Travlr-Default.svg' : '/images/logo/10Travlr-Inverted.svg'"
+                    :src="isMainNavShowed ? '/images/logo/plane.svg' : '/images/logo/plane-inverted.svg'"
                     alt="10Travlr"
                     class="travlr-logo logo"
                 >

@@ -37,13 +37,8 @@
             </nav>
             <div class="lg:flex justify-between lg:w-full">
                 <div class="mb-8 lg:flex items-center lg:mb-0 gap-x-6">        
-                    <img 
-                        src="/images/logo/AFTA-ATAS.svg"
-                        alt="AFTA ATAS"
-                        class="mb-4 h-16 mx-auto"
-                    >
                     <span class="date mb-8 lg:mb-0">
-                        © 2023 10travlr. All rights reserved.
+                        © 2023 Travel. All rights reserved.
                     </span>
                 </div>
                 <button

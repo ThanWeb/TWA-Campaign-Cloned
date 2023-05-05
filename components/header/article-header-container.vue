@@ -22,7 +22,7 @@
                     >
                 </NuxtLink>
                 <img 
-                    src="/images/logo/10Travlr-Default.svg"
+                    src="/images/logo/plane.svg"
                     alt="10Travlr"
                     class="travlr-logo logo"
                 >
